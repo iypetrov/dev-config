@@ -15,7 +15,7 @@ do_auth_setup() {
   
   rm -rf /root/.ssh
 
-  git clone "https://iypetrov:${GH_PAT}@github.com/ipetrov/vault.git" "${prj_dir}/common/vault"
+  git clone https://iypetrov:${GH_PAT}@github.com/ipetrov/vault.git ${prj_dir}/common/vault
 
   echo "${ANSIBLE_VAULT_PASSWORD}" > /tmp/ansible-vault-pass.txt
 
