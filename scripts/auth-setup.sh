@@ -45,3 +45,7 @@ if do_auth_setup; then
 else
   echo "❌ Auth setup failed"
 fi
+
+eval "$(ssh-agent -s)"
+ssh-add /root/.ssh/id_ed25519_personal
+ssh-add /root/.ssh/id_ed25519_work
