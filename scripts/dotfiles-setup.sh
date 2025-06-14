@@ -6,10 +6,13 @@ prj_dir="/root/projects"
 do_dotfiles_setup() {
   	read -srp "GitHub Personal Access Token: " GH_PAT
   	echo
+   	rm -rf /root/.bashrc
+    	rm -rf /root/.gitconfig
 	git clone https://github.com/tmux-plugins/tpm /root/.tmux/plugins/tpm
 	git clone https://iypetrov:${GH_PAT}@github.com/iypetrov/.dotfiles.git "${prj_dir}/common/.dotfiles"
   	cd "${prj_dir}/common"
 	stow --target=/root .dotfiles
+ 	cd "${prj_dir}/common/.dotfiles"
   	git remote set-url origin git@github.com:iypetrov/.dotfiles.git
  	cd "${curr_prj}"
 }
