@@ -4,8 +4,6 @@ curr_dir="$(pwd)"
 prj_dir="/root/projects"
 
 do_auth_setup() {
-  set -e
-
   read -srp "GitHub Personal Access Token: " GH_PAT
   echo
   read -srp "Ansible Vault Password: " ANSIBLE_VAULT_PASSWORD
@@ -33,6 +31,8 @@ do_auth_setup() {
   cd "${prj_dir}/common/vault"
   git remote set-url origin git@github.com:iypetrov/vault.git
   cd "${curr_dir}"
+
+  rm /tmp/ansible-vault-pass.txt
 }
 
 if [[ -d "${prj_dir}/common/vault" ]]; then
@@ -44,7 +44,4 @@ if do_auth_setup; then
   echo "✅ Auth setup succeeded"
 else
   echo "❌ Auth setup failed"
-  rm -rf /root/.ssh
-  rm -rf /root/.aws
-  rm -rf "${prj_dir}/common/vault"
 fi

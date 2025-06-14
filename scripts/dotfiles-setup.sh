@@ -4,12 +4,13 @@ curr_prj="$(pwd)"
 prj_dir="/root/projects"
 
 do_dotfiles_setup() {
-	mv /root/.bashrc /root/.bashrc.bak
-	set -e
+  	read -srp "GitHub Personal Access Token: " GH_PAT
+  	echo
 	git clone https://github.com/tmux-plugins/tpm /root/.tmux/plugins/tpm
-	git clone git@github.com:iypetrov/.dotfiles.git /root/projects/common/.dotfiles
-	cd /root/projects/common
+	git clone https://iypetrov:${GH_PAT}@github.com/iypetrov/.dotfiles.git "${prj_dir}/common/.dotfiles"
+  	cd "${prj_dir}/common"
 	stow --target=/root .dotfiles
+  	git remote set-url origin git@github.com:iypetrov/.dotfiles.git
  	cd "${curr_prj}"
 }
 
@@ -21,9 +22,6 @@ fi
 echo "🔧 Setting up dotfiles"
 if do_dotfiles_setup; then
   echo "✅ Dotfiles were configured successfully"
-  rm -rf /root/.bashrc.bak
 else
   echo "❌ Dotfiles were NOT configured successfully"
-  rm -rf /root/.bashrc
-  mv /root/.bashrc.bak /root/.bashrc
 fi
