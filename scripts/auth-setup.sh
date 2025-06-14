@@ -15,18 +15,23 @@ do_auth_setup() {
   
   rm -rf /root/.ssh
 
-  git clone https://iypetrov:${GH_PAT}@github.com/ipetrov/vault.git ${prj_dir}/common/vault
+  git clone https://iypetrov:${GH_PAT}@github.com/iypetrov/vault.git ${prj_dir}/common/vault
 
   echo "${ANSIBLE_VAULT_PASSWORD}" > /tmp/ansible-vault-pass.txt
 
-  find "${prj_dir}/common/vault/.ssh" -type f -exec ansible-vault decrypt --vault-password-file /tmp/ansible-vault-pass.txt {} \;
-  find "${prj_dir}/common/vault/.aws" -type f -exec ansible-vault decrypt --vault-password-file /tmp/ansible-vault-pass.txt {} \;
+  # Only decrypt if directories exist
+  if [ -d "${prj_dir}/common/vault/.ssh" ]; then
+    find "${prj_dir}/common/vault/.ssh" -type f -exec ansible-vault decrypt --vault-password-file /tmp/ansible-vault-pass.txt {} \;
+    ln -sfn "${prj_dir}/common/vault/.ssh" /root
+  fi
 
-  ln -sfn "${prj_dir}/common/vault/.ssh" /root
-  ln -sfn "${prj_dir}/common/vault/.aws" /root
+  if [ -d "${prj_dir}/common/vault/.aws" ]; then
+    find "${prj_dir}/common/vault/.aws" -type f -exec ansible-vault decrypt --vault-password-file /tmp/ansible-vault-pass.txt {} \;
+    ln -sfn "${prj_dir}/common/vault/.aws" /root
+  fi
 
   cd "${prj_dir}/common/vault"
-  git remote set-url origin git@github.com:ipetrov/vault.git
+  git remote set-url origin git@github.com:iypetrov/vault.git
   cd "${curr_dir}"
 }
 
