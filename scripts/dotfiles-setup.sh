@@ -1,5 +1,6 @@
 #!/bin/bash
 
+curr_prj="$(pwd)"
 prj_dir="/root/projects"
 
 do_dotfiles_setup() {
@@ -10,6 +11,7 @@ do_dotfiles_setup() {
 	git clone git@github.com:iypetrov/.dotfiles.git /root/projects/common/.dotfiles
 	cd /root/projects/common
 	stow --target=/root .dotfiles
+ 	cd "${curr_prj}"
 }
 
 if [[ -d "${prj_dir}/common/.dotfiles" ]]; then
