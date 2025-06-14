@@ -7,7 +7,7 @@ fi
 
 dep="$1"
 
-if apt show "${dep}" 2> /dev/null | grep -qsi "installed-size\|description"; then
+if dpkg -s "${dep}" &>/dev/null; then
 	echo "🔕 Skip installing \"${dep}\" dependency, already available"
 else
     echo "🔧 Installing \"${dep}\" dependency"
