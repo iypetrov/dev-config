@@ -18,6 +18,7 @@ if [[ -d "${prj_dir}/common/.dotfiles" ]]; then
   exit 0
 fi
 
+echo "🔧 Setting up dotfiles"
 if do_dotfiles_setup; then
   echo "✅ Dotfiles were configured successfully"
   rm -rf /root/.bashrc.bak
