@@ -22,3 +22,7 @@ scripts_dir="$(dirname "$(realpath -q "${BASH_SOURCE[0]}")")/scripts"
 "${scripts_dir}"/apt-install-dep.sh silversearcher-ag
 "${scripts_dir}"/apt-install-dep.sh jq
 "${scripts_dir}"/apt-install-dep.sh yq
+
+
+"${scripts_dir}"/auth-setup.sh
+"${scripts_dir}"/dotfiles-setup.sh

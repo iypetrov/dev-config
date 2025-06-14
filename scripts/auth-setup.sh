@@ -1,0 +1,43 @@
+#!/bin/bash
+
+curr_dir="$(pwd)"
+prj_dir="/root/projects"
+
+do_auth_setup() {
+  set -e
+
+  read -srp "GitHub Personal Access Token: " GH_PAT
+  echo
+  read -srp "Ansible Vault Password: " ANSIBLE_VAULT_PASSWORD
+  echo
+
+  rm -rf /root/.ssh
+
+  git clone "https://ipetrov:${GH_PAT}@github.com/ipetrov/vault.git" "${prj_dir}/common/vault"
+
+  echo "${ANSIBLE_VAULT_PASSWORD}" > /tmp/ansible-vault-pass.txt
+
+  find "${prj_dir}/common/vault/.ssh" -type f -exec ansible-vault decrypt --vault-password-file /tmp/ansible-vault-pass.txt {} \;
+  find "${prj_dir}/common/vault/.aws" -type f -exec ansible-vault decrypt --vault-password-file /tmp/ansible-vault-pass.txt {} \;
+
+  ln -sfn "${prj_dir}/common/vault/.ssh" /root
+  ln -sfn "${prj_dir}/common/vault/.aws" /root
+
+  cd "${prj_dir}/common/vault"
+  git remote set-url origin git@github.com:ipetrov/vault.git
+  cd "${curr_dir}"
+}
+
+if [[ -d "${prj_dir}/common/vault" ]]; then
+  echo "🔕 Auth setup was already done"
+  exit 0
+fi
+
+if do_auth_setup; then
+  echo "✅ Auth setup succeeded"
+else
+  echo "❌ Auth setup failed"
+  rm -rf /root/.ssh
+  rm -rf /root/.aws
+  rm -rf "${prj_dir}/common/vault"
+fi
