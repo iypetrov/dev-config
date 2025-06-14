@@ -7,13 +7,13 @@ fi
 
 dep="$1"
 
-if which "${dep}" > /dev/null 2>&1; then
-	echo "🔕 Skip isntalling ${dep} dependency, already available"
+if apt show "${dep}" 2> /dev/null | grep -qsi "installed-size\|description"; then
+	echo "🔕 Skip installing \"${dep}\" dependency, already available"
 else
-    echo "🔧 Installing ${dep} dependency"
+    echo "🔧 Installing \"${dep}\" dependency"
     if apt install -y "${dep}"; then
-        echo "✅ ${cmd} dependency installed successfully"
+        echo "✅ \"${dep}\" dependency installed successfully"
     else
-        echo "❌ ${cmd} dependency failed to install"
+        echo "❌ \"${dep}\" dependency failed to install"
     fi
 fi
