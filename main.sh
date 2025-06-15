@@ -37,10 +37,37 @@ fi
 "${scripts_dir}"/asdf.sh
 
 # Brave
-curl -fsS https://dl.brave.com/install.sh | sh
+if command -v brave-browser &>/dev/null; then
+    echo "🔕 Skip installing Brave, already available"
+else
+    echo "🔧 Installing Brave browser"
+    if curl -fsS https://dl.brave.com/install.sh | sh; then
+        echo "✅ Brave browser installed successfully"
+    else
+        echo "❌ Brave browser failed to install"
+    fi
+fi
 
 # Postman
-snap install postman
+if snap list | grep -q "^postman\s"; then
+    echo "🔕 Skip installing Postman, already available via snap"
+else
+    echo "🔧 Installing Postman via snap"
+    if snap install postman; then
+        echo "✅ Postman installed successfully"
+    else
+        echo "❌ Postman failed to install"
+    fi
+fi
 
 # DBeaver
-snap install dbeaver-ce
+if snap list | grep -q "^dbeaver-ce\s"; then
+    echo "🔕 Skip installing DBeaver, already available via snap"
+else
+    echo "🔧 Installing DBeaver via snap"
+    if snap install dbeaver-ce; then
+        echo "✅ DBeaver installed successfully"
+    else
+        echo "❌ DBeaver failed to install"
+    fi
+fi
