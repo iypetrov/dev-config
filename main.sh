@@ -28,6 +28,10 @@ apt update
 "${scripts_dir}"/apt-install-dep.sh postgresql-client
 "${scripts_dir}"/apt-install-dep.sh i3
 
+if ! dpkg -s i3 &>/dev/null; then
+    ln -s "${prj_dir}/common/.dotfiles/.config/i3/config" "/home/ipetrov/.config/i3/config"
+fi
+
 "${scripts_dir}"/auth-setup.sh
 "${scripts_dir}"/dotfiles-setup.sh
 "${scripts_dir}"/asdf.sh
