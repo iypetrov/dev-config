@@ -2,7 +2,8 @@
 
 if [[ ! -d "/root/.asdf" ]]; then
     git clone https://github.com/asdf-vm/asdf.git /root/.asdf --branch v0.11.0
-    source /root/.bashrc
+    . "/root/.asdf/asdf.sh"
+    . "/root/.asdf/completions/asdf.bash"
 fi
 
 while read plugin; do
