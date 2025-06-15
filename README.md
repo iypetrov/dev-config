@@ -1,8 +1,12 @@
 # dev-config
 
-If you want to bootstrap your system use
+Before bootsraping make sure to run as root user or with sudo.
 ```bash
 sudo su
+```
+
+If you want to bootstrap your system use
+```bash
 apt update
 apt install -y git open-vm-tools open-vm-tools-desktop
 git clone https://github.com/iypetrov/dev-config.git /root/projects/common/dev-config
