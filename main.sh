@@ -8,7 +8,7 @@ apt update
 "${scripts_dir}"/apt-install-dep.sh stow
 "${scripts_dir}"/apt-install-dep.sh ansible
 "${scripts_dir}"/apt-install-dep.sh sudo
-"${scripts_dir}"/apt-install-dep.sh vim-nox
+"${scripts_dir}"/apt-install-dep.sh vim-gtk3
 "${scripts_dir}"/apt-install-dep.sh tmux
 "${scripts_dir}"/apt-install-dep.sh fzf 
 "${scripts_dir}"/apt-install-dep.sh build-essential
