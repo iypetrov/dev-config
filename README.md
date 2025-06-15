@@ -7,5 +7,5 @@ curl -fsSL https://raw.githubusercontent.com/iypetrov/dev-config/refs/heads/main
 
 If you want to reload you config run
 ```bash
-bash /root/projects/common/dev-config/init.sh
+bash /root/projects/common/dev-config/main.sh
 ```
