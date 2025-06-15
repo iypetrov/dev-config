@@ -26,6 +26,7 @@ apt update
 "${scripts_dir}"/apt-install-dep.sh tar
 "${scripts_dir}"/apt-install-dep.sh gnupg
 "${scripts_dir}"/apt-install-dep.sh postgresql-client
+"${scripts_dir}"/apt-install-dep.sh i3
 
 "${scripts_dir}"/auth-setup.sh
 "${scripts_dir}"/dotfiles-setup.sh
