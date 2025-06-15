@@ -3,7 +3,7 @@
 scripts_dir="$(dirname "$(realpath -q "${BASH_SOURCE[0]}")")/scripts"
 
 apt update
-"${scripts_dir}"/apt-install-dep.sh curl
+"${scripts_dir}"/apt-install-dep.sh wget
 "${scripts_dir}"/apt-install-dep.sh unzip
 "${scripts_dir}"/apt-install-dep.sh stow
 "${scripts_dir}"/apt-install-dep.sh ansible
