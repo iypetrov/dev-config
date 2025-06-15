@@ -28,13 +28,11 @@ apt update
 "${scripts_dir}"/apt-install-dep.sh postgresql-client
 "${scripts_dir}"/apt-install-dep.sh i3
 
-if ! dpkg -s i3 &>/dev/null; then
-    ln -s "${prj_dir}/common/.dotfiles/.config/i3/config" "/home/ipetrov/.config/i3/config"
-fi
-
 "${scripts_dir}"/auth-setup.sh
 "${scripts_dir}"/dotfiles-setup.sh
 "${scripts_dir}"/asdf.sh
+
+ln -s "/root/projects/common/.dotfiles/.config/i3/config" "/home/ipetrov/.config/i3/config"
 
 # Brave
 if command -v brave-browser &>/dev/null; then
@@ -71,3 +69,16 @@ else
         echo "❌ DBeaver failed to install"
     fi
 fi
+
+"${scripts_dir}"/clone-repo.sh git@github.com:iypetrov/go-playground.git personal/go-playground
+"${scripts_dir}"/clone-repo.sh git@github.com:iypetrov/aws-playground.git personal/aws-playground
+"${scripts_dir}"/clone-repo.sh git@github.com:iypetrov/k8s-playground.git personal/k8s-playground
+
+cpx_pat="$(tr -d '\n' < /root/projects/common/vault/auth_codes/cpx-gitlab.txt)"
+"${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GXrestricted/infrastructure/terraform/tf-de-gasx.git work/tf-de-gasx
+"${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GXrestricted/infrastructure/terraform/tf-de-lab52.git work/tf-de-lab52
+"${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GXrestricted/infrastructure/terraform/tf-de-lab12.git work/tf-de-lab12
+"${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GXrestricted/infrastructure/terraform/tf-de-lab09.git work/tf-de-lab09
+"${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GXrestricted/infrastructure/salt/salt.git work/salt
+"${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GXrestricted/infrastructure/salt/pillar.git work/pillar
+"${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GX/Infrastructure/infratools/jfrogpoc.git work/jfrogpoc

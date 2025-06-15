@@ -17,7 +17,6 @@ do_auth_setup() {
 
   echo "${ANSIBLE_VAULT_PASSWORD}" > /tmp/ansible-vault-pass.txt
 
-  # Only decrypt if directories exist
   if [ -d "${prj_dir}/common/vault/.ssh" ]; then
     find "${prj_dir}/common/vault/.ssh" -type f -exec ansible-vault decrypt --vault-password-file /tmp/ansible-vault-pass.txt {} \;
     ln -sfn "${prj_dir}/common/vault/.ssh" /root
@@ -26,6 +25,10 @@ do_auth_setup() {
   if [ -d "${prj_dir}/common/vault/.aws" ]; then
     find "${prj_dir}/common/vault/.aws" -type f -exec ansible-vault decrypt --vault-password-file /tmp/ansible-vault-pass.txt {} \;
     ln -sfn "${prj_dir}/common/vault/.aws" /root
+  fi
+
+  if [ -d "${prj_dir}/common/vault/auth_codes" ]; then
+    find "${prj_dir}/common/vault/auth_codes" -type f -exec ansible-vault decrypt --vault-password-file /tmp/ansible-vault-pass.txt {} \;
   fi
 
   cd "${prj_dir}/common/vault"
