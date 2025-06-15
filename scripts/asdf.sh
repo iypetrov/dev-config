@@ -8,8 +8,8 @@ fi
 . "/root/.asdf/completions/asdf.bash"
 while read line; do
     plugin="$(echo "${line}" | cut -d ' ' -f 1)"
-    version="$(echo "${line}" | cut -d ' ' -f 2)"
     url="$(asdf plugin list all | grep -E "^${plugin}[[:space:]]+" | xargs | cut -d ' ' -f 2)"
     asdf plugin add "${plugin}" "${url}"
-    asdf install "${plugin}" "${version}"
 done < <(cat /root/.tool-versions | cut -d ' ' -f 1)
+
+asdf install
