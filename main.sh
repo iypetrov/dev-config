@@ -24,7 +24,15 @@ apt update
 "${scripts_dir}"/apt-install-dep.sh jq
 "${scripts_dir}"/apt-install-dep.sh yq
 "${scripts_dir}"/apt-install-dep.sh tar
+"${scripts_dir}"/apt-install-dep.sh gnupg
+"${scripts_dir}"/apt-install-dep.sh postgresql-client
 
 "${scripts_dir}"/auth-setup.sh
 "${scripts_dir}"/dotfiles-setup.sh
 "${scripts_dir}"/asdf.sh
+
+# Brave
+curl -fsS https://dl.brave.com/install.sh | sh
+
+# pgAdmin4
+snap install dbeaver-ce
