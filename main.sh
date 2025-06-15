@@ -34,5 +34,8 @@ apt update
 # Brave
 curl -fsS https://dl.brave.com/install.sh | sh
 
-# pgAdmin4
+# Postman
+snap install postman
+
+# DBeaver
 snap install dbeaver-ce
