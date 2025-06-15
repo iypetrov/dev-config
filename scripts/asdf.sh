@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [[ ! -d "/root/.asdf" ]]; then
-    git clone https://github.com/asdf-vm/asdf.git /root/.asdf
+    git clone https://github.com/asdf-vm/asdf.git /root/.asdf --branch v0.11.0
     source /root/.bashrc
 fi
 
