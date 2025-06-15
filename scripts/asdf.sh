@@ -1,6 +1,13 @@
 #!/bin/bash
 
-wget https://github.com/asdf-vm/asdf/releases/download/v0.18.0/asdf-v0.18.0-linux-arm64.tar.gz -O /tmp/asdf-v0.18.0-linux-arm64.tar.gz
-mkdir -p ~/.local/bin
-tar -xvzf /tmp/asdf-v0.18.0-linux-arm64.tar.gz -C ~/.local/bin
+git clone https://github.com/asdf-vm/asdf.git /root/.asdf
 source /root/.bashrc
+
+while read plugin; do
+    url="$(asdf plugin list all | grep -E "^${plugin}[[:space:]]+" | xargs | cut -d ' ' -f 2)"
+    echo "${plugin}"
+    echo "${url}"
+    asdf plugin add "${plugin}" "${url}"
+done < <(cat /root/.tool-versions | cut -d ' ' -f 1)
+
+asdf install
