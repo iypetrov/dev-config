@@ -28,11 +28,17 @@ apt update
 "${scripts_dir}"/apt-install-dep.sh postgresql-client
 "${scripts_dir}"/apt-install-dep.sh i3
 
+if ! command -v delta > /dev/null 2>&1; then 
+    wget https://github.com/dandavison/delta/releases/download/0.17.0/git-delta_0.17.0_arm64.deb
+    dpkg -i git-delta_0.17.0_arm64.deb
+    rm git-delta_0.17.0_arm64.deb
+fi
+
 "${scripts_dir}"/auth-setup.sh
 "${scripts_dir}"/dotfiles-setup.sh
 "${scripts_dir}"/devbox.sh
 
-ln -s "/root/projects/common/.dotfiles/.config/i3/config" "/home/ipetrov/.config/i3/config"
+ln -s "/root/projects/common/.dotfiles/.config/i3/config" "/home/ipetrov/.i3/config"
 
 # Brave
 if command -v brave-browser &>/dev/null; then
