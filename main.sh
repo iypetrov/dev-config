@@ -38,7 +38,8 @@ fi
 "${scripts_dir}"/dotfiles-setup.sh
 "${scripts_dir}"/devbox.sh
 
-ln -s "/root/projects/common/.dotfiles/.config/i3/config" "/home/ipetrov/.config/i3/config"
+mkdir -p "/home/ipetrov/.config/i3"
+cp "/root/projects/common/.dotfiles/.config/i3/config" "/home/ipetrov/.config/i3/config"
 
 # Brave
 if command -v brave-browser &>/dev/null; then
