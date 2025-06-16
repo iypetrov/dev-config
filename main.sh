@@ -30,7 +30,7 @@ apt update
 
 "${scripts_dir}"/auth-setup.sh
 "${scripts_dir}"/dotfiles-setup.sh
-"${scripts_dir}"/asdf.sh
+"${scripts_dir}"/devbox.sh
 
 ln -s "/root/projects/common/.dotfiles/.config/i3/config" "/home/ipetrov/.config/i3/config"
 
