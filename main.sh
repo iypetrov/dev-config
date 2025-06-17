@@ -27,6 +27,7 @@ apt update
 "${scripts_dir}"/apt-install-dep.sh gnupg
 "${scripts_dir}"/apt-install-dep.sh postgresql-client
 "${scripts_dir}"/apt-install-dep.sh i3
+"${scripts_dir}"/apt-install-dep.sh xclip
 
 if ! command -v delta > /dev/null 2>&1; then 
     wget https://github.com/dandavison/delta/releases/download/0.17.0/git-delta_0.17.0_arm64.deb
@@ -77,10 +78,22 @@ else
     fi
 fi
 
+# personal repos
 "${scripts_dir}"/clone-repo.sh git@github.com:iypetrov/go-playground.git personal/go-playground
 "${scripts_dir}"/clone-repo.sh git@github.com:iypetrov/aws-playground.git personal/aws-playground
 "${scripts_dir}"/clone-repo.sh git@github.com:iypetrov/k8s-playground.git personal/k8s-playground
 
+# ip812 repos
+"${scripts_dir}"/clone-repo.sh git@github.com:ip812/infra.git ip812/infra
+"${scripts_dir}"/clone-repo.sh git@github.com:ip812/go-template.git ip812/go-template
+"${scripts_dir}"/clone-repo.sh git@github.com:ip812/lambdas.git ip812/lambdas
+
+# avalon repos
+"${scripts_dir}"/clone-repo.sh git@github.com:avalonpharma/infra.git avalonpharma/infra
+"${scripts_dir}"/clone-repo.sh git@github.com:avalonpharma/avalon-ui.git avalonpharma/avalon-ui
+"${scripts_dir}"/clone-repo.sh git@github.com:avalonpharma/avalon-rest.git avalonpharma/avalon-rest
+
+# work repos
 cpx_pat="$(tr -d '\n' < /root/projects/common/vault/auth_codes/cpx-gitlab.txt)"
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GXrestricted/infrastructure/terraform/tf-de-gasx.git work/tf-de-gasx
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GXrestricted/infrastructure/terraform/tf-de-lab52.git work/tf-de-lab52
