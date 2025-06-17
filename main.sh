@@ -56,9 +56,9 @@ fi
 
 # Postman
 if snap list | grep -q "^postman\s"; then
-    echo "🔕 Skip installing Postman, already available via snap"
+    echo "🔕 Skip installing Postman, already available"
 else
-    echo "🔧 Installing Postman via snap"
+    echo "🔧 Installing Postman"
     if snap install postman; then
         echo "✅ Postman installed successfully"
     else
@@ -68,9 +68,9 @@ fi
 
 # DBeaver
 if snap list | grep -q "^dbeaver-ce\s"; then
-    echo "🔕 Skip installing DBeaver, already available via snap"
+    echo "🔕 Skip installing DBeaver, already available"
 else
-    echo "🔧 Installing DBeaver via snap"
+    echo "🔧 Installing DBeaver"
     if snap install dbeaver-ce; then
         echo "✅ DBeaver installed successfully"
     else
