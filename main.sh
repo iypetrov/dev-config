@@ -102,3 +102,6 @@ cpx_pat="$(tr -d '\n' < /root/projects/common/vault/auth_codes/cpx-gitlab.txt)"
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GXrestricted/infrastructure/salt/salt.git work/salt
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GXrestricted/infrastructure/salt/pillar.git work/pillar
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GX/Infrastructure/infratools/jfrogpoc.git work/jfrogpoc
+"${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GX/portal/qa/q00-cpx-sup-cd.git work/q00-cpx-sup-cd
+"${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GX/portal/qa/q00-cpx-sso-cd.git work/q00-cpx-sso-cd
+"${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GX/portal/qa/qa-cpx-tso-cd.git work/qa-cpx-tso-cd
