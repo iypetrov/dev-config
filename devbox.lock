@@ -161,6 +161,90 @@
         }
       }
     },
+    "gcc@15.1.0": {
+      "last_modified": "2025-05-28T23:33:38Z",
+      "resolved": "github:NixOS/nixpkgs/e80506de785dc48dcfbb636c443c5e2b0b5b2d7d#gcc15",
+      "source": "devbox-search",
+      "version": "15.1.0",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/2bp9d4diz68rq3v49724rjdznfq933kk-gcc-wrapper-15.1.0",
+              "default": true
+            },
+            {
+              "name": "man",
+              "path": "/nix/store/wis90l0fc678qcwa2j8hn245z4i7161j-gcc-wrapper-15.1.0-man",
+              "default": true
+            },
+            {
+              "name": "info",
+              "path": "/nix/store/v620267icbm0y1iilfdsipldl2nlc33y-gcc-wrapper-15.1.0-info"
+            }
+          ],
+          "store_path": "/nix/store/2bp9d4diz68rq3v49724rjdznfq933kk-gcc-wrapper-15.1.0"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/8r91xw93d431bs9lrikyb3avr77hm97r-gcc-wrapper-15.1.0",
+              "default": true
+            },
+            {
+              "name": "man",
+              "path": "/nix/store/dxxih14yszb3ipzkav0z2avmwxyv278b-gcc-wrapper-15.1.0-man",
+              "default": true
+            },
+            {
+              "name": "info",
+              "path": "/nix/store/4b47agrg0k88csbw0988sikz3hyfdk3k-gcc-wrapper-15.1.0-info"
+            }
+          ],
+          "store_path": "/nix/store/8r91xw93d431bs9lrikyb3avr77hm97r-gcc-wrapper-15.1.0"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/chi7iqcig4pganw2gwpv4f4rf9ickmgp-gcc-wrapper-15.1.0",
+              "default": true
+            },
+            {
+              "name": "man",
+              "path": "/nix/store/a5adx2nppjgf30zarzmjl2svpsxb7vqk-gcc-wrapper-15.1.0-man",
+              "default": true
+            },
+            {
+              "name": "info",
+              "path": "/nix/store/5086x24vxf1m72nmlxbr59l3f4m2c6d5-gcc-wrapper-15.1.0-info"
+            }
+          ],
+          "store_path": "/nix/store/chi7iqcig4pganw2gwpv4f4rf9ickmgp-gcc-wrapper-15.1.0"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/alpcp7ch64wbfy20vp6zlr0pamacya61-gcc-wrapper-15.1.0",
+              "default": true
+            },
+            {
+              "name": "man",
+              "path": "/nix/store/6n1xlv4pq9awr853np571dqap9lf8rws-gcc-wrapper-15.1.0-man",
+              "default": true
+            },
+            {
+              "name": "info",
+              "path": "/nix/store/yiqiyvx3c83dyybdpbscin0r2ixfdnhn-gcc-wrapper-15.1.0-info"
+            }
+          ],
+          "store_path": "/nix/store/alpcp7ch64wbfy20vp6zlr0pamacya61-gcc-wrapper-15.1.0"
+        }
+      }
+    },
     "github:NixOS/nixpkgs/nixpkgs-unstable": {
       "last_modified": "2025-06-14T12:19:57Z",
       "resolved": "github:NixOS/nixpkgs/41da1e3ea8e23e094e5e3eeb1e6b830468a7399e?lastModified=1749903597&narHash=sha256-jp0D4vzBcRKwNZwfY4BcWHemLGUs4JrS3X9w5k%2FJYDA%3D"
