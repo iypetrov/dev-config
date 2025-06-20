@@ -82,11 +82,13 @@ fi
 "${scripts_dir}"/clone-repo.sh git@github.com:iypetrov/go-playground.git personal/go-playground
 "${scripts_dir}"/clone-repo.sh git@github.com:iypetrov/aws-playground.git personal/aws-playground
 "${scripts_dir}"/clone-repo.sh git@github.com:iypetrov/k8s-playground.git personal/k8s-playground
+"${scripts_dir}"/clone-repo.sh git@github.com:iypetrov/state-exam.git personal/state-exam
 
 # ip812 repos
 "${scripts_dir}"/clone-repo.sh git@github.com:ip812/infra.git ip812/infra
 "${scripts_dir}"/clone-repo.sh git@github.com:ip812/go-template.git ip812/go-template
 "${scripts_dir}"/clone-repo.sh git@github.com:ip812/lambdas.git ip812/lambdas
+"${scripts_dir}"/clone-repo.sh git@github.com:ip812/blog.git ip812/blog
 
 # avalon repos
 "${scripts_dir}"/clone-repo.sh git@github.com:avalonpharma/infra.git avalonpharma/infra
