@@ -35,6 +35,7 @@
     "ssm-session-manager-plugin@1.2.707.0",
 
     "kubectl@1.33.1",
+    "kubernetes-helm@3.18.2",
     "eksctl@0.209.0",
     "kubectx@0.9.5",
     "k9s@0.50.6",
