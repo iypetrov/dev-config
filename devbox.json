@@ -1,24 +1,47 @@
 {
   "packages": [
-    "go@1.24.3",
     "gopls@0.18.1",
+    "go@1.24.3",
     "goimports@2021-01-13",
     "govulncheck@1.1.4",
     "air@1.62.0",
     "sqlc@1.29.0",
     "templ@0.3.865",
+
+    "typescript-language-server@4.3.3",
     "nodejs@24.1.0",
+
+    "python313Packages.python-lsp-server@1.12.2",
     "python@3.13.3",
     "pyenv@2.6.1",
+
+    "jdt-language-server@1.47.0",
+    "openjdk@17.0.1",
+    "maven@3.8.5",
+
+    "coc-clangd@0.31.0",
     "gcc@15.1.0",
+
+    "nodePackages.vscode-html-languageserver-bin@1.4.0",
+    "tailwindcss-language-server@0.14.21",
+
+    "sqlc@1.29.0",
     "postgresql@17.5",
+
+    "yaml-language-server@1.18.0",
+    "nodePackages.vscode-json-languageserver@1.3.4",
+
+    "terraform-ls@0.36.5",
     "terraform@1.9.7",
+
     "awscli2@2.27.2",
     "ssm-session-manager-plugin@1.2.707.0",
+
     "kubectl@1.33.1",
     "eksctl@0.209.0",
     "kubectx@0.9.5",
     "k9s@0.50.6",
+
     "jfrog-cli@2.76.1"
   ],
   "shell": {

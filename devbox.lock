@@ -973,6 +973,70 @@
         }
       }
     },
+    "python313Packages.python-lsp-server@1.12.2": {
+      "last_modified": "2025-05-16T20:19:48Z",
+      "resolved": "github:NixOS/nixpkgs/12a55407652e04dcf2309436eb06fef0d3713ef3#python313Packages.python-lsp-server",
+      "source": "devbox-search",
+      "version": "1.12.2",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/dl128k3ailqhqghdli822ql0w6xsd8w8-python3.13-python-lsp-server-1.12.2",
+              "default": true
+            },
+            {
+              "name": "dist",
+              "path": "/nix/store/n058rdgpmsimg2nmnx7gaj1ikfw76xff-python3.13-python-lsp-server-1.12.2-dist"
+            }
+          ],
+          "store_path": "/nix/store/dl128k3ailqhqghdli822ql0w6xsd8w8-python3.13-python-lsp-server-1.12.2"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/r07snjln3y2g8bhb0mkgyh6ymm7mz22l-python3.13-python-lsp-server-1.12.2",
+              "default": true
+            },
+            {
+              "name": "dist",
+              "path": "/nix/store/3kvsibfmppam96f9ap1nf48mgwi70p3f-python3.13-python-lsp-server-1.12.2-dist"
+            }
+          ],
+          "store_path": "/nix/store/r07snjln3y2g8bhb0mkgyh6ymm7mz22l-python3.13-python-lsp-server-1.12.2"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/ds027wikkidvpkmh64ym26336hgvf780-python3.13-python-lsp-server-1.12.2",
+              "default": true
+            },
+            {
+              "name": "dist",
+              "path": "/nix/store/565xbs389gbbz4aqqvncqmn580x6c0i3-python3.13-python-lsp-server-1.12.2-dist"
+            }
+          ],
+          "store_path": "/nix/store/ds027wikkidvpkmh64ym26336hgvf780-python3.13-python-lsp-server-1.12.2"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/xnb3qj6pjz8271x1n4mk0a27c43xwikh-python3.13-python-lsp-server-1.12.2",
+              "default": true
+            },
+            {
+              "name": "dist",
+              "path": "/nix/store/ymbq8k4nhd72453x1i3lj5r95wwqkbi8-python3.13-python-lsp-server-1.12.2-dist"
+            }
+          ],
+          "store_path": "/nix/store/xnb3qj6pjz8271x1n4mk0a27c43xwikh-python3.13-python-lsp-server-1.12.2"
+        }
+      }
+    },
     "python@3.13.3": {
       "last_modified": "2025-05-16T20:19:48Z",
       "plugin_version": "0.0.4",
@@ -1219,6 +1283,54 @@
             }
           ],
           "store_path": "/nix/store/6wywv3h71xscb7nhjdylvjl006i1sgjn-terraform-1.9.7"
+        }
+      }
+    },
+    "typescript-language-server@4.3.3": {
+      "last_modified": "2025-06-05T08:10:37Z",
+      "resolved": "github:NixOS/nixpkgs/ec62ae342c340d24289735e31eb9155261cd5fe7#typescript-language-server",
+      "source": "devbox-search",
+      "version": "4.3.3",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/swwn2spcndglgi91p32yi3p8y027cnn5-typescript-language-server-4.3.3",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/swwn2spcndglgi91p32yi3p8y027cnn5-typescript-language-server-4.3.3"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/rsygairay7405rgclxd1mv42g1hfashi-typescript-language-server-4.3.3",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/rsygairay7405rgclxd1mv42g1hfashi-typescript-language-server-4.3.3"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/31zkna6s1092qr46iyy6m45iglprfs6i-typescript-language-server-4.3.3",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/31zkna6s1092qr46iyy6m45iglprfs6i-typescript-language-server-4.3.3"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/999hnw7mdc6znbcw32mdcv6k992jwvw0-typescript-language-server-4.3.3",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/999hnw7mdc6znbcw32mdcv6k992jwvw0-typescript-language-server-4.3.3"
         }
       }
     }
