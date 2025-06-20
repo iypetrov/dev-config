@@ -15,11 +15,6 @@
     "python@3.13.3",
     "pyenv@2.6.1",
 
-    "jdt-language-server@1.47.0",
-    "openjdk@17.0.1",
-    "maven@3.8.5",
-
-    "coc-clangd@0.31.0",
     "gcc@15.1.0",
 
     "nodePackages.vscode-html-languageserver-bin@1.4.0",
