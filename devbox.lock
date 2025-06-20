@@ -113,6 +113,102 @@
         }
       }
     },
+    "coc-clangd@0.31.0": {
+      "last_modified": "2025-05-16T20:19:48Z",
+      "resolved": "github:NixOS/nixpkgs/12a55407652e04dcf2309436eb06fef0d3713ef3#coc-clangd",
+      "source": "devbox-search",
+      "version": "0.31.0",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/y1kiyc3m63rh7qqqa5x4w4wisrwfpwgn-coc-clangd-0.31.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/y1kiyc3m63rh7qqqa5x4w4wisrwfpwgn-coc-clangd-0.31.0"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/09sl64il7xxkhk0mllmk1cmz46idmhpg-coc-clangd-0.31.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/09sl64il7xxkhk0mllmk1cmz46idmhpg-coc-clangd-0.31.0"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/04wb7pkdpkx75d9g7j83kyha1bsbffip-coc-clangd-0.31.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/04wb7pkdpkx75d9g7j83kyha1bsbffip-coc-clangd-0.31.0"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/mm21y7mfpsmijynq3lynw0k0qb474wjx-coc-clangd-0.31.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/mm21y7mfpsmijynq3lynw0k0qb474wjx-coc-clangd-0.31.0"
+        }
+      }
+    },
+    "dockerfile-language-server-nodejs@0.11.0": {
+      "last_modified": "2025-05-16T20:19:48Z",
+      "resolved": "github:NixOS/nixpkgs/12a55407652e04dcf2309436eb06fef0d3713ef3#dockerfile-language-server-nodejs",
+      "source": "devbox-search",
+      "version": "0.11.0",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/45c6qa7c1ii5g49fjrxwch7h755i4qdd-dockerfile-language-server-nodejs-0.11.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/45c6qa7c1ii5g49fjrxwch7h755i4qdd-dockerfile-language-server-nodejs-0.11.0"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/7qn7dhzzhszk5382pc3wyy8car0jrxhm-dockerfile-language-server-nodejs-0.11.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/7qn7dhzzhszk5382pc3wyy8car0jrxhm-dockerfile-language-server-nodejs-0.11.0"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/bfrvmfh3cmyh27g8w0lmxdhm8m62lkrb-dockerfile-language-server-nodejs-0.11.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/bfrvmfh3cmyh27g8w0lmxdhm8m62lkrb-dockerfile-language-server-nodejs-0.11.0"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/l1v6h2gkcsn2gfgkw3bx36pdixdk8kpl-dockerfile-language-server-nodejs-0.11.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/l1v6h2gkcsn2gfgkw3bx36pdixdk8kpl-dockerfile-language-server-nodejs-0.11.0"
+        }
+      }
+    },
     "eksctl@0.209.0": {
       "last_modified": "2025-06-06T01:46:53Z",
       "resolved": "github:NixOS/nixpkgs/6ad174a6dc07c7742fc64005265addf87ad08615#eksctl",
@@ -427,6 +523,54 @@
         }
       }
     },
+    "jdt-language-server@1.47.0": {
+      "last_modified": "2025-06-01T15:36:18Z",
+      "resolved": "github:NixOS/nixpkgs/5929de975bcf4c7c8d8b5ca65c8cd9ef9e44523e#jdt-language-server",
+      "source": "devbox-search",
+      "version": "1.47.0",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/gng2s6akgh302lv699jxp8lcix285y2l-jdt-language-server-1.47.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/gng2s6akgh302lv699jxp8lcix285y2l-jdt-language-server-1.47.0"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/z1v5jp16vw9vpkypbaaqbwdl0n797nga-jdt-language-server-1.47.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/z1v5jp16vw9vpkypbaaqbwdl0n797nga-jdt-language-server-1.47.0"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/720s7z99mh0885zl0zyj3rfh45vr96q3-jdt-language-server-1.47.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/720s7z99mh0885zl0zyj3rfh45vr96q3-jdt-language-server-1.47.0"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/i5nhvz03k22rwmynf8009m6z2k7lc961-jdt-language-server-1.47.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/i5nhvz03k22rwmynf8009m6z2k7lc961-jdt-language-server-1.47.0"
+        }
+      }
+    },
     "jfrog-cli@2.76.1": {
       "last_modified": "2025-06-01T15:36:18Z",
       "resolved": "github:NixOS/nixpkgs/5929de975bcf4c7c8d8b5ca65c8cd9ef9e44523e#jfrog-cli",
@@ -655,6 +799,150 @@
         }
       }
     },
+    "maven@3.8.5": {
+      "last_modified": "2022-08-16T08:43:52Z",
+      "resolved": "github:NixOS/nixpkgs/6c6409e965a6c883677be7b9d87a95fab6c3472e#maven",
+      "source": "devbox-search",
+      "version": "3.8.5",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/qzgy5lqjr8k51vnb42qxr1w1jm8km95s-apache-maven-3.8.5",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/qzgy5lqjr8k51vnb42qxr1w1jm8km95s-apache-maven-3.8.5"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/pv4bzjp3f1mjwskczycja59jfcgrh6i0-apache-maven-3.8.5",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/pv4bzjp3f1mjwskczycja59jfcgrh6i0-apache-maven-3.8.5"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/nfq45zh48131zzks8kjsh2n4zmyxcq5w-apache-maven-3.8.5",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/nfq45zh48131zzks8kjsh2n4zmyxcq5w-apache-maven-3.8.5"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/fyd1nw6ixfszbrjjpfx7nggsf06d8mav-apache-maven-3.8.5",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/fyd1nw6ixfszbrjjpfx7nggsf06d8mav-apache-maven-3.8.5"
+        }
+      }
+    },
+    "nodePackages.vscode-html-languageserver-bin@1.4.0": {
+      "last_modified": "2024-06-12T20:55:33Z",
+      "resolved": "github:NixOS/nixpkgs/a9858885e197f984d92d7fe64e9fff6b2e488d40#nodePackages.vscode-html-languageserver-bin",
+      "source": "devbox-search",
+      "version": "1.4.0",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/gbl2gzwyh9a4vxcsmkgal8sw0iq20g88-vscode-html-languageserver-bin-1.4.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/gbl2gzwyh9a4vxcsmkgal8sw0iq20g88-vscode-html-languageserver-bin-1.4.0"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/1p721ijr56p6nmxfsfh07agjqnkpkq67-vscode-html-languageserver-bin-1.4.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/1p721ijr56p6nmxfsfh07agjqnkpkq67-vscode-html-languageserver-bin-1.4.0"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/i8k6ii2bkq6c3mzqklfc7vk8gf7w49i3-vscode-html-languageserver-bin-1.4.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/i8k6ii2bkq6c3mzqklfc7vk8gf7w49i3-vscode-html-languageserver-bin-1.4.0"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/4hxl5y9igxyllxh5fb592z1xi9g0ra16-vscode-html-languageserver-bin-1.4.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/4hxl5y9igxyllxh5fb592z1xi9g0ra16-vscode-html-languageserver-bin-1.4.0"
+        }
+      }
+    },
+    "nodePackages.vscode-json-languageserver@1.3.4": {
+      "last_modified": "2025-05-21T18:43:04Z",
+      "resolved": "github:NixOS/nixpkgs/8c441601c43232976179eac52dde704c8bdf81ed#nodePackages.vscode-json-languageserver",
+      "source": "devbox-search",
+      "version": "1.3.4",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/mndm86v5na30zlmps8r3sgbdg5an6g6z-vscode-json-languageserver-1.3.4",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/mndm86v5na30zlmps8r3sgbdg5an6g6z-vscode-json-languageserver-1.3.4"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/lyygqang2f4hnm2v2yl7k5lvprhhfz24-vscode-json-languageserver-1.3.4",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/lyygqang2f4hnm2v2yl7k5lvprhhfz24-vscode-json-languageserver-1.3.4"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/jyiwni0sjyn120whz5bvfpw7h25rhq4s-vscode-json-languageserver-1.3.4",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/jyiwni0sjyn120whz5bvfpw7h25rhq4s-vscode-json-languageserver-1.3.4"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/zxv1y1lvhiw2qqck1xqfxzdywvxbzmn6-vscode-json-languageserver-1.3.4",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/zxv1y1lvhiw2qqck1xqfxzdywvxbzmn6-vscode-json-languageserver-1.3.4"
+        }
+      }
+    },
     "nodejs@24.1.0": {
       "last_modified": "2025-06-11T05:21:29Z",
       "plugin_version": "0.0.2",
@@ -735,6 +1023,12 @@
           "store_path": "/nix/store/wnayblhh0555nwfccnzcqkzph52y4yby-nodejs-24.1.0"
         }
       }
+    },
+    "openjdk@17.0.1": {
+      "last_modified": "2022-05-03T02:40:48Z",
+      "resolved": "github:NixOS/nixpkgs/24c33ab7952544ad355d0677c9eea931b23f371c#openjdk",
+      "source": "devbox-search",
+      "version": "17.0.1"
     },
     "postgresql@17.5": {
       "last_modified": "2025-06-14T12:19:57Z",
@@ -1190,6 +1484,54 @@
         }
       }
     },
+    "tailwindcss-language-server@0.14.21": {
+      "last_modified": "2025-06-10T02:39:58Z",
+      "resolved": "github:NixOS/nixpkgs/cdc68935eba9f86d155585fdf6f17af6824f38ac#tailwindcss-language-server",
+      "source": "devbox-search",
+      "version": "0.14.21",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/r9n5fj65v08mzgaw799gcdw765v908v7-tailwindcss-language-server-0.14.21",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/r9n5fj65v08mzgaw799gcdw765v908v7-tailwindcss-language-server-0.14.21"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/qdcajnaazpaz2fh9q8rfsqrfrwiw610c-tailwindcss-language-server-0.14.21",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/qdcajnaazpaz2fh9q8rfsqrfrwiw610c-tailwindcss-language-server-0.14.21"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/r2r22yn78cz9mylpyqdwzxnb6anxyzv3-tailwindcss-language-server-0.14.21",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/r2r22yn78cz9mylpyqdwzxnb6anxyzv3-tailwindcss-language-server-0.14.21"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/irmv5dxjbjrcb2p5m33amgi86bcnbkmx-tailwindcss-language-server-0.14.21",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/irmv5dxjbjrcb2p5m33amgi86bcnbkmx-tailwindcss-language-server-0.14.21"
+        }
+      }
+    },
     "templ@0.3.865": {
       "last_modified": "2025-05-16T20:19:48Z",
       "resolved": "github:NixOS/nixpkgs/12a55407652e04dcf2309436eb06fef0d3713ef3#templ",
@@ -1235,6 +1577,54 @@
             }
           ],
           "store_path": "/nix/store/yq6xygf7hq5alzfwyalfd5wixwzswcfl-templ-0.3.865"
+        }
+      }
+    },
+    "terraform-ls@0.36.5": {
+      "last_modified": "2025-06-18T03:01:18Z",
+      "resolved": "github:NixOS/nixpkgs/5395fb3ab3f97b9b7abca147249fa2e8ed27b192#terraform-ls",
+      "source": "devbox-search",
+      "version": "0.36.5",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/xzzqipcwcm0a483sflk2939sx9gx4ym2-terraform-ls-0.36.5",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/xzzqipcwcm0a483sflk2939sx9gx4ym2-terraform-ls-0.36.5"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/msv0ydd4axgzpn79c9rx68bylijilw9z-terraform-ls-0.36.5",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/msv0ydd4axgzpn79c9rx68bylijilw9z-terraform-ls-0.36.5"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/g7zqnh4dqyrdm19ri8k2liyzbmd31kl3-terraform-ls-0.36.5",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/g7zqnh4dqyrdm19ri8k2liyzbmd31kl3-terraform-ls-0.36.5"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/i9plrsir8acfz6sclvm28sv0x9ddanby-terraform-ls-0.36.5",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/i9plrsir8acfz6sclvm28sv0x9ddanby-terraform-ls-0.36.5"
         }
       }
     },
@@ -1331,6 +1721,54 @@
             }
           ],
           "store_path": "/nix/store/999hnw7mdc6znbcw32mdcv6k992jwvw0-typescript-language-server-4.3.3"
+        }
+      }
+    },
+    "yaml-language-server@1.18.0": {
+      "last_modified": "2025-06-08T07:56:50Z",
+      "resolved": "github:NixOS/nixpkgs/8207ad0d501dd3590e0e81a7c56b386a5c4342c9#yaml-language-server",
+      "source": "devbox-search",
+      "version": "1.18.0",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/6i51sq39k9ipcb44cfjnf7cc788pw5h2-yaml-language-server-1.18.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/6i51sq39k9ipcb44cfjnf7cc788pw5h2-yaml-language-server-1.18.0"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/42k9rd1j08949x91rs1j0lssw785hry0-yaml-language-server-1.18.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/42k9rd1j08949x91rs1j0lssw785hry0-yaml-language-server-1.18.0"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/ii5yisqxjv71xivzll77radih6yq16wq-yaml-language-server-1.18.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/ii5yisqxjv71xivzll77radih6yq16wq-yaml-language-server-1.18.0"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/skbqmgismsnzk0gk1v849fwg8rh38343-yaml-language-server-1.18.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/skbqmgismsnzk0gk1v849fwg8rh38343-yaml-language-server-1.18.0"
         }
       }
     }
