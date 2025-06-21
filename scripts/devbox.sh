@@ -8,4 +8,4 @@ if ! command -v devbox &>/dev/null; then
     curl -fsSL https://get.jetify.com/devbox | bash
 fi
 
-devbox install --config /root/projects/common/.dotfiles/devbox.json
+devbox install --config /root/projects/common/dev-config/devbox.json
