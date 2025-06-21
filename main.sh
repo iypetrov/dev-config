@@ -28,6 +28,7 @@ apt update
 "${scripts_dir}"/apt-install-dep.sh postgresql-client
 "${scripts_dir}"/apt-install-dep.sh i3
 "${scripts_dir}"/apt-install-dep.sh xclip
+"${scripts_dir}"/apt-install-dep.sh tree
 
 if ! command -v delta > /dev/null 2>&1; then 
     wget https://github.com/dandavison/delta/releases/download/0.17.0/git-delta_0.17.0_arm64.deb
