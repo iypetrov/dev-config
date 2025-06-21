@@ -79,6 +79,23 @@ else
     fi
 fi
 
+# VS Code
+if command -v code >/dev/null 2>&1; then
+    echo "🔕 Skip installing VS Code, already available"
+else
+    echo "🔧 Installing VS Code 1.89.1 (ARM64 via .deb)"
+    if wget -qO /tmp/code.deb https://update.code.visualstudio.com/1.89.1/linux-deb-arm64/stable; then
+        if sudo apt install -y /tmp/code.deb; then
+            echo "✅ VS Code 1.89.1 installed successfully"
+        else
+            echo "❌ Failed to install VS Code from .deb"
+        fi
+        rm -f /tmp/code.deb
+    else
+        echo "❌ Failed to download VS Code .deb"
+    fi
+fi
+
 # personal repos
 "${scripts_dir}"/clone-repo.sh git@github.com:iypetrov/go-playground.git personal/go-playground
 "${scripts_dir}"/clone-repo.sh git@github.com:iypetrov/aws-playground.git personal/aws-playground
