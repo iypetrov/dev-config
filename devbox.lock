@@ -113,6 +113,54 @@
         }
       }
     },
+    "bash-language-server@5.6.0": {
+      "last_modified": "2025-06-20T02:24:11Z",
+      "resolved": "github:NixOS/nixpkgs/076e8c6678d8c54204abcb4b1b14c366835a58bb#bash-language-server",
+      "source": "devbox-search",
+      "version": "5.6.0",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/ay78fqv1df76s9bgzzzzdkklhbb0pjy5-bash-language-server-5.6.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/ay78fqv1df76s9bgzzzzdkklhbb0pjy5-bash-language-server-5.6.0"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/gh53b0lzl7i5as3vg8pmc5q28p3vrhvs-bash-language-server-5.6.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/gh53b0lzl7i5as3vg8pmc5q28p3vrhvs-bash-language-server-5.6.0"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/xgq6v65i8m0pg641w7awr1qm5cds5ax4-bash-language-server-5.6.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/xgq6v65i8m0pg641w7awr1qm5cds5ax4-bash-language-server-5.6.0"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/dcv7h8ysjxmgb9i5972n63p3rzxqy94p-bash-language-server-5.6.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/dcv7h8ysjxmgb9i5972n63p3rzxqy94p-bash-language-server-5.6.0"
+        }
+      }
+    },
     "dockerfile-language-server-nodejs@0.11.0": {
       "last_modified": "2025-05-16T20:19:48Z",
       "resolved": "github:NixOS/nixpkgs/12a55407652e04dcf2309436eb06fef0d3713ef3#dockerfile-language-server-nodejs",
@@ -925,6 +973,54 @@
             }
           ],
           "store_path": "/nix/store/wnayblhh0555nwfccnzcqkzph52y4yby-nodejs-24.1.0"
+        }
+      }
+    },
+    "packer@1.13.1": {
+      "last_modified": "2025-06-20T02:24:11Z",
+      "resolved": "github:NixOS/nixpkgs/076e8c6678d8c54204abcb4b1b14c366835a58bb#packer",
+      "source": "devbox-search",
+      "version": "1.13.1",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/klgk0cgwhxy38094lj313knzb7n06frl-packer-1.13.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/klgk0cgwhxy38094lj313knzb7n06frl-packer-1.13.1"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/00hmhrxqsx2nxcfns1jjh5v595mh11hp-packer-1.13.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/00hmhrxqsx2nxcfns1jjh5v595mh11hp-packer-1.13.1"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/ff2l4lby48zczl6qcj61jchd1hv8r7cr-packer-1.13.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/ff2l4lby48zczl6qcj61jchd1hv8r7cr-packer-1.13.1"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/chqw6sxnybqiivrh9qv8w16ixlvdb94j-packer-1.13.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/chqw6sxnybqiivrh9qv8w16ixlvdb94j-packer-1.13.1"
         }
       }
     },
