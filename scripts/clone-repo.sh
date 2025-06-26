@@ -15,8 +15,8 @@ if [[ -d "${prj_dir}/${path}" ]]; then
   exit 0
 fi
 
-echo "🔧 Cloning ${repo_url} to ${prj_dir}/${path}"
-if git clone "${repo}" "${prj_dir}/${path}"; then
+echo "🔧 Cloning ${repo} to ${prj_dir}/${path}"
+if git clone "${repo_url}" "${prj_dir}/${path}"; then
     echo "✅ ${repo} cloned successfully to ${prj_dir}/${path}"
 else
     echo "❌ Failed to clone ${repo_url} to ${prj_dir}/${path}"
