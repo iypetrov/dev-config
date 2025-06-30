@@ -84,16 +84,34 @@ fi
 if command -v code >/dev/null 2>&1; then
     echo "🔕 Skip installing VS Code, already available"
 else
-    echo "🔧 Installing VS Code 1.89.1 (ARM64 via .deb)"
+    echo "🔧 Installing VS Code"
     if wget -qO /tmp/code.deb https://update.code.visualstudio.com/1.89.1/linux-deb-arm64/stable; then
         if sudo apt install -y /tmp/code.deb; then
-            echo "✅ VS Code 1.89.1 installed successfully"
+            echo "✅ VS Code installed successfully"
         else
-            echo "❌ Failed to install VS Code from .deb"
+            echo "❌ Failed to install VS Code"
         fi
         rm -f /tmp/code.deb
     else
-        echo "❌ Failed to download VS Code .deb"
+        echo "❌ Failed to download VS Code"
+    fi
+fi
+
+# Intellij IDEA
+if command -v idea >/dev/null 2>&1; then
+    echo "🔕 Skip installing Intellij IDEA, already available"
+else
+    echo "🔧 Installing Intellij IDEA"
+    if wget -qO /tmp/idea.tar.gz https://download.jetbrains.com/idea/ideaIU-2025.1.3-aarch64.tar.gz; then
+        tar -xzf /tmp/idea.tar.gz -C /opt/
+        EXTRACTED_DIR=$(tar -tf /tmp/idea.tar.gz | head -1 | cut -f1 -d"/")
+        sudo mv /opt/"${EXTRACTED_DIR}" /opt/intellij-idea-ultimate
+        sudo ln -sf /opt/intellij-idea-ultimate/bin/idea.sh /usr/local/bin/idea
+        rm -f /tmp/idea.tar.gz
+
+        echo "✅ IntelliJ IDEA installed successfully"
+    else
+        echo "❌ Failed to download Intellij IDEA"
     fi
 fi
 
