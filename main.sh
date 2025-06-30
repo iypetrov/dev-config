@@ -32,9 +32,9 @@ apt update
 "${scripts_dir}"/apt-install-dep.sh keychain
 
 if ! command -v delta > /dev/null 2>&1; then 
-    wget https://github.com/dandavison/delta/releases/download/0.17.0/git-delta_0.17.0_arm64.deb
-    dpkg -i git-delta_0.17.0_arm64.deb
-    rm git-delta_0.17.0_arm64.deb
+    wget "https://github.com/dandavison/delta/releases/download/0.17.0/git-delta_0.17.0_$(dpkg --print-architecture).deb"
+    dpkg -i "git-delta_0.17.0_$(dpkg --print-architecture).deb"
+    rm "git-delta_0.17.0_$(dpkg --print-architecture).deb"
 fi
 
 "${scripts_dir}"/auth-setup.sh
@@ -85,7 +85,7 @@ if command -v code >/dev/null 2>&1; then
     echo "🔕 Skip installing VS Code, already available"
 else
     echo "🔧 Installing VS Code"
-    if wget -qO /tmp/code.deb https://update.code.visualstudio.com/1.89.1/linux-deb-arm64/stable; then
+    if wget -qO /tmp/code.deb "https://update.code.visualstudio.com/1.89.1/linux-deb-$(dpkg --print-architecture)/stable"; then
         if sudo apt install -y /tmp/code.deb; then
             echo "✅ VS Code installed successfully"
         else
@@ -102,7 +102,7 @@ if command -v idea >/dev/null 2>&1; then
     echo "🔕 Skip installing Intellij IDEA, already available"
 else
     echo "🔧 Installing Intellij IDEA"
-    if wget -qO /tmp/idea.tar.gz https://download.jetbrains.com/idea/ideaIU-2025.1.3-aarch64.tar.gz; then
+    if wget -qO /tmp/idea.tar.gz "https://download.jetbrains.com/idea/ideaIU-2025.1.3-$(uname -m).tar.gz"; then
         tar -xzf /tmp/idea.tar.gz -C /opt/
         EXTRACTED_DIR=$(tar -tf /tmp/idea.tar.gz | head -1 | cut -f1 -d"/")
         sudo mv /opt/"${EXTRACTED_DIR}" /opt/intellij-idea-ultimate
