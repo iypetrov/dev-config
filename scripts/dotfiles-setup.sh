@@ -13,7 +13,7 @@ do_dotfiles_setup() {
 	git clone https://iypetrov:${GH_PAT}@github.com/iypetrov/.dotfiles.git "${prj_dir}/common/.dotfiles"
   	cd "${prj_dir}/common"
 	stow --target=/root .dotfiles
-    sudo -u ipetrov stow --target=/home/ipetrov bash
+    sudo -u ipetrov stow --target=/home/ipetrov .dotfiles
  	cd "${prj_dir}/common/.dotfiles"
   	git remote set-url origin git@github.com:iypetrov/.dotfiles.git
  	cd "${curr_prj}"
