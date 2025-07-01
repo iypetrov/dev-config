@@ -67,18 +67,6 @@ else
     fi
 fi
 
-# Postman
-if snap list | grep -q "^postman\s"; then
-    echo "🔕 Skip installing Postman, already available"
-else
-    echo "🔧 Installing Postman"
-    if snap install postman; then
-        echo "✅ Postman installed successfully"
-    else
-        echo "❌ Postman failed to install"
-    fi
-fi
-
 # Beekeeper Studio
 if [[ -x "/usr/local/bin/beekeeper-studio" ]]; then
     echo "🔕 Skip installing Beekeeper Studio, already available"
