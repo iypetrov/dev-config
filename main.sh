@@ -30,6 +30,8 @@ apt update
 "${scripts_dir}"/apt-install-dep.sh xclip
 "${scripts_dir}"/apt-install-dep.sh tree
 "${scripts_dir}"/apt-install-dep.sh keychain
+"${scripts_dir}"/apt-install-dep.sh fuse
+"${scripts_dir}"/apt-install-dep.sh libfuse2
 
 if ! command -v delta > /dev/null 2>&1; then 
     wget "https://github.com/dandavison/delta/releases/download/0.17.0/git-delta_0.17.0_$(dpkg --print-architecture).deb"
@@ -65,15 +67,31 @@ else
     fi
 fi
 
-# DBeaver
-if snap list | grep -q "^dbeaver-ce\s"; then
-    echo "🔕 Skip installing DBeaver, already available"
+# Postman
+if snap list | grep -q "^postman\s"; then
+    echo "🔕 Skip installing Postman, already available"
 else
-    echo "🔧 Installing DBeaver"
-    if snap install dbeaver-ce; then
-        echo "✅ DBeaver installed successfully"
+    echo "🔧 Installing Postman"
+    if snap install postman; then
+        echo "✅ Postman installed successfully"
     else
-        echo "❌ DBeaver failed to install"
+        echo "❌ Postman failed to install"
+    fi
+fi
+
+# Beekeeper Studio
+if [[ -x "/usr/local/bin/beekeeper-studio" ]]; then
+    echo "🔕 Skip installing Beekeeper Studio, already available"
+else
+    echo "🔧 Installing Beekeeper Studio"
+    if wget -q "https://github.com/beekeeper-studio/beekeeper-studio/releases/download/v5.2.12/Beekeeper-Studio-5.2.12-$(dpkg --print-architecture).AppImage" -O /usr/local/bin/beekeeper-studio; then
+        chmod +x /usr/local/bin/beekeeper-studio
+        ln -s "/usr/lib/$(uname -m)-linux-gnu/libz.so.1" "/usr/lib/$(uname -m)-linux-gnu/libz.so"
+        mkdir -p /root/.config/beekeeper-studio
+        chmod 700 /root/.config/beekeeper-studio
+        echo "✅ Beekeeper Studio installed successfully"
+    else
+        echo "❌ Beekeeper Studio failed to install"
     fi
 fi
 
