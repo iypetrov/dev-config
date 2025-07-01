@@ -130,6 +130,13 @@ else
     fi
 fi
 
+# Set up SSH keys
+eval $(keychain --eval --agents ssh id_ed25519_personal id_ed25519_work)
+KEYCHAIN_ENV="/root/.keychain/$(hostname)-sh"
+if [[ -f "$KEYCHAIN_ENV" ]]; then
+  source "$KEYCHAIN_ENV"
+fi
+
 # personal repos
 "${scripts_dir}"/clone-repo.sh git@github.com:iypetrov/go-playground.git personal/go-playground
 "${scripts_dir}"/clone-repo.sh git@github.com:iypetrov/aws-playground.git personal/aws-playground

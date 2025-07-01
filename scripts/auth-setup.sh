@@ -35,8 +35,6 @@ do_auth_setup() {
   git remote set-url origin git@github.com:iypetrov/vault.git
   cd "${curr_dir}"
 
-  eval $(keychain --eval --agents ssh id_ed25519_personal id_ed25519_work)
-
   rm /tmp/ansible-vault-pass.txt
 }
 
