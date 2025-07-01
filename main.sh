@@ -41,18 +41,6 @@ fi
 "${scripts_dir}"/dotfiles-setup.sh
 "${scripts_dir}"/devbox.sh
 
-if [[ -f "/home/ipetrov/.config/i3/config" ]]; then
-    echo "🔕 Skip setting up i3 config, already exists"
-else
-    echo "🔧 Setting up i3 config"
-    mkdir -p "/home/ipetrov/.config/i3"
-    if ln /root/projects/common/.dotfiles/.config/i3/config /home/ipetrov/.config/i3/config; then
-        echo "✅ i3 config is set up successfully"
-    else
-        echo "❌ Failed to set up i3 config"
-    fi
-fi
-
 # Brave
 if command -v brave-browser &>/dev/null; then
     echo "🔕 Skip installing Brave, already available"
