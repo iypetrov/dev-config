@@ -2,7 +2,7 @@
 
 Before bootsraping make sure to run as root user or with sudo.
 ```bash
-sudo su
+sudo su -
 ```
 
 If you want to bootstrap your system use
