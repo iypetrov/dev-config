@@ -33,10 +33,23 @@ apt update
 "${scripts_dir}"/apt-install-dep.sh fuse
 "${scripts_dir}"/apt-install-dep.sh libfuse2
 
+# Git delta
 if ! command -v delta > /dev/null 2>&1; then 
     wget "https://github.com/dandavison/delta/releases/download/0.17.0/git-delta_0.17.0_$(dpkg --print-architecture).deb"
     dpkg -i "git-delta_0.17.0_$(dpkg --print-architecture).deb"
     rm "git-delta_0.17.0_$(dpkg --print-architecture).deb"
+fi
+
+# Ngrok
+if snap list | grep -q "^ngrok\s"; then
+    echo "🔕 Skip installing Ngrok, already available"
+else
+    echo "🔧 Installing Ngrok"
+    if snap install ngrok; then
+        echo "✅ Ngrok installed successfully"
+    else
+        echo "❌ Ngrok failed to install"
+    fi
 fi
 
 "${scripts_dir}"/auth-setup.sh
@@ -151,6 +164,7 @@ cpx_pat="$(tr -d '\n' < /root/projects/common/vault/auth_codes/cpx-gitlab.txt)"
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GXrestricted/infrastructure/terraform/tf-de-lab09.git work/tf-de-lab09
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GXrestricted/infrastructure/salt/salt.git work/salt
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GXrestricted/infrastructure/salt/pillar.git work/pillar
+"${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GXrestricted/infrastructure/elk.git work/elk
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GX/Infrastructure/infratools/jfrogpoc.git work/jfrogpoc
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GX/portal/qa/q00-cpx-sup-cd.git work/q00-cpx-sup-cd
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GX/portal/qa/q00-cpx-sso-cd.git work/q00-cpx-sso-cd
