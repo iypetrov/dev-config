@@ -1,6 +1,15 @@
 #!/bin/bash
 
+curr_dir="$(pwd)"
+prj_dir="/root/projects"
 scripts_dir="$(dirname "$(realpath -q "${BASH_SOURCE[0]}")")/scripts"
+
+if [[ ! -d "${prj_dir}/common/vault" ]]; then
+    read -srp "GitHub Personal Access Token: " GH_PAT
+    echo
+    read -srp "Ansible Vault Password: " ANSIBLE_VAULT_PASSWORD
+    echo
+fi
 
 apt update
 "${scripts_dir}"/apt-install-dep.sh curl 
@@ -52,9 +61,83 @@ else
     fi
 fi
 
-"${scripts_dir}"/auth-setup.sh
-"${scripts_dir}"/dotfiles-setup.sh
-"${scripts_dir}"/devbox.sh
+# Auth
+do_auth_setup() {
+    echo "🔧 Setting up auth"
+
+    rm -rf /root/.ssh
+
+    git clone https://iypetrov:${GH_PAT}@github.com/iypetrov/vault.git ${prj_dir}/common/vault
+
+    echo "${ANSIBLE_VAULT_PASSWORD}" > /tmp/ansible-vault-pass.txt
+
+    if [[ -d "${prj_dir}/common/vault/.ssh" ]]; then
+        find "${prj_dir}/common/vault/.ssh" -type f -exec ansible-vault decrypt --vault-password-file /tmp/ansible-vault-pass.txt {} \;
+        ln -sfn "${prj_dir}/common/vault/.ssh" /root
+    fi
+
+    if [[ -d "${prj_dir}/common/vault/.aws" ]]; then
+        find "${prj_dir}/common/vault/.aws" -type f -exec ansible-vault decrypt --vault-password-file /tmp/ansible-vault-pass.txt {} \;
+        ln -sfn "${prj_dir}/common/vault/.aws" /root
+    fi
+
+    if [[ -d "${prj_dir}/common/vault/auth_codes" ]]; then
+        find "${prj_dir}/common/vault/auth_codes" -type f -exec ansible-vault decrypt --vault-password-file /tmp/ansible-vault-pass.txt {} \;
+    fi
+
+    cd "${prj_dir}/common/vault"
+    git remote set-url origin git@github.com:iypetrov/vault.git
+    cd "${curr_dir}"
+
+    rm /tmp/ansible-vault-pass.txt
+}
+
+if [[ -d "${prj_dir}/common/vault" ]]; then
+    echo "🔕 Auth setup was already done"
+else
+    if do_auth_setup; then
+        echo "✅ Auth setup succeeded"
+    else
+        echo "❌ Auth setup failed"
+    fi
+fi
+
+# Dotfiles
+do_dotfiles_setup() {
+    rm -rf /root/.bashrc
+    rm -rf /root/.gitconfig
+    git clone https://github.com/tmux-plugins/tpm /root/.tmux/plugins/tpm
+    git clone https://iypetrov:${GH_PAT}@github.com/iypetrov/.dotfiles.git "${prj_dir}/common/.dotfiles"
+    cd "${prj_dir}/common"
+    stow --target=/root .dotfiles
+    mkdir -p "/home/ipetrov/.config/i3"
+    cp "/root/projects/common/.dotfiles/.config/i3/config" "/home/ipetrov/.config/i3/config"
+    cd "${prj_dir}/common/.dotfiles"
+    git remote set-url origin git@github.com:iypetrov/.dotfiles.git
+    cd "${curr_dir}"
+}
+
+if [[ -d "${prj_dir}/common/.dotfiles" ]]; then
+    echo "🔕 Dotfiles were already configured"
+else
+    echo "🔧 Setting up dotfiles"
+    if do_dotfiles_setup; then
+        echo "✅ Dotfiles were configured successfully"
+    else
+        echo "❌ Dotfiles were NOT configured successfully"
+    fi
+fi
+
+# Devbox
+if [[ ! -d "/nix" ]]; then
+    sh <(curl --proto '=https' --tlsv1.2 -L https://nixos.org/nix/install) --daemon
+fi
+
+if ! command -v devbox &>/dev/null; then
+    curl -fsSL https://get.jetify.com/devbox | bash
+fi
+
+devbox install --config /root/projects/common/dev-config/devbox.json
 
 # Brave
 if command -v brave-browser &>/dev/null; then
@@ -135,7 +218,7 @@ fi
 eval $(keychain --eval --agents ssh id_ed25519_personal id_ed25519_work)
 KEYCHAIN_ENV="/root/.keychain/$(hostname)-sh"
 if [[ -f "$KEYCHAIN_ENV" ]]; then
-  source "$KEYCHAIN_ENV"
+    source "$KEYCHAIN_ENV"
 fi
 
 # personal repos

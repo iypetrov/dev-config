@@ -11,8 +11,8 @@ path="$2"
 repo="$(echo "${repo_url}" | cut  -d '@' -f 2)"
 
 if [[ -d "${prj_dir}/${path}" ]]; then
-  echo "🔕 ${repo} was already cloned to ${prj_dir}/${path}"
-  exit 0
+    echo "🔕 ${repo} was already cloned to ${prj_dir}/${path}"
+    exit 0
 fi
 
 echo "🔧 Cloning ${repo} to ${prj_dir}/${path}"

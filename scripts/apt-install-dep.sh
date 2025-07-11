@@ -8,7 +8,7 @@ fi
 dep="$1"
 
 if dpkg -s "${dep}" &>/dev/null; then
-	echo "🔕 Skip installing \"${dep}\" dependency, already available"
+    echo "🔕 Skip installing \"${dep}\" dependency, already available"
 else
     echo "🔧 Installing \"${dep}\" dependency"
     if apt install -y "${dep}"; then
