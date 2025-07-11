@@ -4,7 +4,7 @@
 This repo holds a bunch of shell scripts for setting up an Ubuntu machine (later than 25.10 and works on both amd64 and arm64) to my target development setup.
 
 ## Description
-My intention in creating this was that I might change jobs or the company I work at might give me a different laptop with a different OS. I really don't like to waste time setting up a fresh machine to the state I like, so I decided to do it once and reuse it no matter what machine I work on. I achieve this by running all my development work on a VM and using Ubuntu on it.
+My intention in creating this was that I might change jobs or the company I work at might give me a different laptop with a different OS. I really don't like to waste time setting up a fresh machine to the state I like, so I decided to do it once and reuse it no matter what machine I work on. I achieve this by running all my development work on a VM and using Ubuntu on it (Copy/Paste between host and the VM works, don't worry).
 
 Someone may ask - when you have the freedom in the VM to run whatever OS, why did you choose Ubuntu over Arch, Fedora, Mint, NixOS, etc.? The real reason is that, for me, it doesn't make much of a difference between them, and I already have Ubuntu on my personal laptop, so there wasn't a super strong reason to pick something else. This may change in the future, but at the moment, I just want a stable distribution and not to think too much about it.
 
