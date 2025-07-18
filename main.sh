@@ -41,6 +41,7 @@ apt update
 "${scripts_dir}"/apt-install-dep.sh keychain
 "${scripts_dir}"/apt-install-dep.sh fuse
 "${scripts_dir}"/apt-install-dep.sh libfuse2
+"${scripts_dir}"/apt-install-dep.sh git-lfs
 
 # Git delta
 if ! command -v delta > /dev/null 2>&1; then 
