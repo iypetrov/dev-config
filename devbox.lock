@@ -523,6 +523,54 @@
         }
       }
     },
+    "hugo@0.148.1": {
+      "last_modified": "2025-07-13T22:45:35Z",
+      "resolved": "github:NixOS/nixpkgs/a421ac6595024edcfbb1ef950a3712b89161c359#hugo",
+      "source": "devbox-search",
+      "version": "0.148.1",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/4md0rqs1b9kapmy10g8sd6vb4nni3ybc-hugo-0.148.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/4md0rqs1b9kapmy10g8sd6vb4nni3ybc-hugo-0.148.1"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/7faakqrln5klfqmpyv2nc3s39n4s0998-hugo-0.148.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/7faakqrln5klfqmpyv2nc3s39n4s0998-hugo-0.148.1"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/sxyfxn3lzdxq97p1mirzkssrra3apypv-hugo-0.148.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/sxyfxn3lzdxq97p1mirzkssrra3apypv-hugo-0.148.1"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/w4awv0aifpbwv5yvdqf09b0pm1krsc9n-hugo-0.148.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/w4awv0aifpbwv5yvdqf09b0pm1krsc9n-hugo-0.148.1"
+        }
+      }
+    },
     "jfrog-cli@2.76.1": {
       "last_modified": "2025-06-01T15:36:18Z",
       "resolved": "github:NixOS/nixpkgs/5929de975bcf4c7c8d8b5ca65c8cd9ef9e44523e#jfrog-cli",
