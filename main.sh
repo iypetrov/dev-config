@@ -42,6 +42,8 @@ apt update
 "${scripts_dir}"/apt-install-dep.sh fuse
 "${scripts_dir}"/apt-install-dep.sh libfuse2
 "${scripts_dir}"/apt-install-dep.sh git-lfs
+"${scripts_dir}"/apt-install-dep.sh ffmpeg
+"${scripts_dir}"/apt-install-dep.sh imagemagick
 
 # Git delta
 if ! command -v delta > /dev/null 2>&1; then 

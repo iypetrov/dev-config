@@ -16,35 +16,20 @@
     "python313Packages.python-lsp-server@1.12.2",
     "pipenv@2025.0.3",
 
-    "gcc@13.3.0",
-
-    "nodePackages.vscode-html-languageserver-bin@1.4.0",
-    "tailwindcss-language-server@0.14.21",
-
-    "openjdk@17.0.1",
-
-    "sqlc@1.29.0",
     "postgresql@17.5",
 
     "bash-language-server@5.6.0",
-    "yaml-language-server@1.18.0",
-    "nodePackages.vscode-json-languageserver@1.3.4",
-    "dockerfile-language-server-nodejs@0.11.0",
 
     "terraform-ls@0.36.5",
     "terraform@1.9.7",
-    "packer@1.13.1",
 
     "awscli2@2.27.2",
     "ssm-session-manager-plugin@1.2.707.0",
 
     "kubectl@1.33.1",
     "kubernetes-helm@3.18.2",
-    "eksctl@0.209.0",
     "kubectx@0.9.5",
     "k9s@0.50.6",
-
-    "jfrog-cli@2.76.1",
     "hugo@0.148.1"
   ],
   "shell": {
