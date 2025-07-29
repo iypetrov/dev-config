@@ -52,6 +52,14 @@ if ! command -v delta > /dev/null 2>&1; then
     rm "git-delta_0.17.0_$(dpkg --print-architecture).deb"
 fi
 
+# Docker Compose
+if ! command -v docker-compose > /dev/null 2>&1; then
+    echo "🔧 Installing Docker Compose"
+    curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+    chmod +x /usr/local/bin/docker-compose
+    docker-compose --version
+fi
+
 # Ngrok
 if snap list | grep -q "^ngrok\s"; then
     echo "🔕 Skip installing Ngrok, already available"
