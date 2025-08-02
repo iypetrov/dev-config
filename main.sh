@@ -1,7 +1,7 @@
 #!/bin/bash
 
 curr_dir="$(pwd)"
-prj_dir="/root/projects"
+prj_dir="/projects"
 scripts_dir="$(dirname "$(realpath -q "${BASH_SOURCE[0]}")")/scripts"
 
 if [[ ! -d "${prj_dir}/common/vault" ]]; then
@@ -122,7 +122,7 @@ do_dotfiles_setup() {
     cd "${prj_dir}/common"
     stow --target=/root .dotfiles
     mkdir -p "/home/ipetrov/.config/i3"
-    cp "/root/projects/common/.dotfiles/.config/i3/config" "/home/ipetrov/.config/i3/config"
+    cp "/projects/common/.dotfiles/.config/i3/config" "/home/ipetrov/.config/i3/config"
     cd "${prj_dir}/common/.dotfiles"
     git remote set-url origin git@github.com:iypetrov/.dotfiles.git
     cd "${curr_dir}"
@@ -148,7 +148,7 @@ if ! command -v devbox &>/dev/null; then
     curl -fsSL https://get.jetify.com/devbox | bash
 fi
 
-devbox install --config /root/projects/common/dev-config/devbox.json
+devbox install --config /projects/common/dev-config/devbox.json
 
 # Brave
 if command -v brave-browser &>/dev/null; then
@@ -252,7 +252,7 @@ fi
 "${scripts_dir}"/clone-repo.sh git@github.com:avalonpharma/avalon-rest.git avalonpharma/avalon-rest
 
 # work repos
-cpx_pat="$(tr -d '\n' < /root/projects/common/vault/auth_codes/cpx-gitlab.txt)"
+cpx_pat="$(tr -d '\n' < /projects/common/vault/auth_codes/cpx-gitlab.txt)"
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GXrestricted/infrastructure/terraform/tf-de-gasx.git work/tf-de-gasx
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GXrestricted/infrastructure/terraform/tf-de-lab52.git work/tf-de-lab52
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GXrestricted/infrastructure/terraform/tf-de-lab12.git work/tf-de-lab12

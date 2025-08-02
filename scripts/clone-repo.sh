@@ -5,7 +5,7 @@ if [[ $# -ne 2 ]]; then
     exit 1
 fi
 
-prj_dir="/root/projects"
+prj_dir="/projects"
 repo_url="$1"
 path="$2"
 repo="$(echo "${repo_url}" | cut  -d '@' -f 2)"
