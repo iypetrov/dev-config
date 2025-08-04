@@ -18,7 +18,9 @@ fi
 echo "🔧 Cloning ${repo} to ${prj_dir}/${path}"
 if git clone "${repo_url}" "${prj_dir}/${path}"; then
     echo "✅ ${repo} cloned successfully to ${prj_dir}/${path}"
-    chown -R ipetrov:ipetrov "${prj_dir}/${path}"
+    cd "${prj_dir}/${path}"
+    chown -R ipetrov:ipetrov .
+    cd /root
 else
     echo "❌ Failed to clone ${repo_url} to ${prj_dir}/${path}"
     exit 1
