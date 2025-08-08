@@ -249,6 +249,8 @@ fi
 "${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/jaeger-operator.git git@github.com:jaegertracing/jaeger-operator.git personal/jaeger-operator
 "${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/helm-charts.git git@github.com:jaegertracing/helm-charts.git personal/jaeger-helm-charts
 
+"${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/opentelemetry-operator.git git@github.com:open-telemetry/opentelemetry-operator.git personal/opentelemetry-operator
+
 # ip812 repos
 "${scripts_dir}"/clone-repo.sh git@github.com:ip812/infra.git ip812/infra
 "${scripts_dir}"/clone-repo.sh git@github.com:ip812/go-template.git ip812/go-template
