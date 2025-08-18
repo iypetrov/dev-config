@@ -234,6 +234,7 @@ fi
 
 # personal repos
 "${scripts_dir}"/clone-repo.sh https://github.com/terraform-aws-modules/terraform-aws-eks.git personal/terraform-aws-eks
+"${scripts_dir}"/clone-repo.sh https://github.com/aws/karpenter-provider-aws.git personal/karpenter-provider-aws
 
 "${scripts_dir}"/clone-repo.sh git@github.com:iypetrov/go-playground.git personal/go-playground
 "${scripts_dir}"/clone-repo.sh git@github.com:iypetrov/aws-playground.git personal/aws-playground
