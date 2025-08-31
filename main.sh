@@ -170,9 +170,6 @@ if [[ -f "$KEYCHAIN_ENV" ]]; then
 fi
 
 # personal repos
-"${scripts_dir}"/clone-repo.sh https://github.com/terraform-aws-modules/terraform-aws-eks.git personal/terraform-aws-eks
-"${scripts_dir}"/clone-repo.sh https://github.com/aws/karpenter-provider-aws.git personal/karpenter-provider-aws
-
 "${scripts_dir}"/clone-repo.sh git@github.com:iypetrov/go-playground.git personal/go-playground
 "${scripts_dir}"/clone-repo.sh git@github.com:iypetrov/aws-playground.git personal/aws-playground
 "${scripts_dir}"/clone-repo.sh git@github.com:iypetrov/k8s-playground.git personal/k8s-playground
@@ -180,14 +177,6 @@ fi
 "${scripts_dir}"/clone-repo.sh git@github.com:iypetrov/url-shortener.git personal/url-shortener
 "${scripts_dir}"/clone-repo.sh git@github.com:iypetrov/static-site-generator.git personal/static-site-generator
 "${scripts_dir}"/clone-repo.sh git@github.com:iypetrov/lambdas.git personal/lambdas
-
-"${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/jaeger.git git@github.com:jaegertracing/jaeger.git personal/jaeger
-"${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/jaeger-idl.git git@github.com:jaegertracing/jaeger-idl.git personal/jaeger-idl
-"${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/jaeger-ui.git git@github.com:jaegertracing/jaeger-ui.git personal/jaeger-ui
-"${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/jaeger-operator.git git@github.com:jaegertracing/jaeger-operator.git personal/jaeger-operator
-"${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/helm-charts.git git@github.com:jaegertracing/helm-charts.git personal/jaeger-helm-charts
-
-"${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/opentelemetry-operator.git git@github.com:open-telemetry/opentelemetry-operator.git personal/opentelemetry-operator
 
 # ip812 repos
 "${scripts_dir}"/clone-repo.sh git@github.com:ip812/infra.git ip812/infra
@@ -200,6 +189,16 @@ fi
 "${scripts_dir}"/clone-repo.sh git@github.com:avalonpharma/infra.git avalonpharma/infra
 "${scripts_dir}"/clone-repo.sh git@github.com:avalonpharma/avalon-ui.git avalonpharma/avalon-ui
 "${scripts_dir}"/clone-repo.sh git@github.com:avalonpharma/avalon-rest.git avalonpharma/avalon-rest
+
+# oss repos
+"${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/jaeger.git git@github.com:jaegertracing/jaeger.git oss/jaeger
+"${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/jaeger-idl.git git@github.com:jaegertracing/jaeger-idl.git oss/jaeger-idl
+"${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/jaeger-ui.git git@github.com:jaegertracing/jaeger-ui.git oss/jaeger-ui
+"${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/jaeger-operator.git git@github.com:jaegertracing/jaeger-operator.git oss/jaeger-operator
+"${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/helm-charts.git git@github.com:jaegertracing/helm-charts.git oss/jaeger-helm-charts
+"${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/opentelemetry-operator.git git@github.com:open-telemetry/opentelemetry-operator.git oss/opentelemetry-operator
+"${scripts_dir}"/clone-repo.sh https://github.com/terraform-aws-modules/terraform-aws-eks.git oss/terraform-aws-eks
+"${scripts_dir}"/clone-repo.sh https://github.com/aws/karpenter-provider-aws.git oss/karpenter-provider-aws
 
 # work repos
 cpx_pat="$(tr -d '\n' < /projects/common/vault/auth_codes/cpx-gitlab.txt)"
