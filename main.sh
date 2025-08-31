@@ -162,69 +162,6 @@ else
     fi
 fi
 
-# Postman
-if snap list | grep -q "^postman\s"; then
-    echo "🔕 Skip installing Postman, already available"
-else
-    echo "🔧 Installing Postman"
-    if snap install postman; then
-        echo "✅ Postman installed successfully"
-    else
-        echo "❌ Postman failed to install"
-    fi
-fi
-
-# Beekeeper Studio
-if [[ -x "/usr/local/bin/beekeeper-studio" ]]; then
-    echo "🔕 Skip installing Beekeeper Studio, already available"
-else
-    echo "🔧 Installing Beekeeper Studio"
-    if wget -q "https://github.com/beekeeper-studio/beekeeper-studio/releases/download/v5.2.12/Beekeeper-Studio-5.2.12-$(dpkg --print-architecture).AppImage" -O /usr/local/bin/beekeeper-studio; then
-        chmod +x /usr/local/bin/beekeeper-studio
-        ln -s "/usr/lib/$(uname -m)-linux-gnu/libz.so.1" "/usr/lib/$(uname -m)-linux-gnu/libz.so"
-        mkdir -p /root/.config/beekeeper-studio
-        chmod 700 /root/.config/beekeeper-studio
-        echo "✅ Beekeeper Studio installed successfully"
-    else
-        echo "❌ Beekeeper Studio failed to install"
-    fi
-fi
-
-# VS Code
-if command -v code >/dev/null 2>&1; then
-    echo "🔕 Skip installing VS Code, already available"
-else
-    echo "🔧 Installing VS Code"
-    if wget -qO /tmp/code.deb "https://update.code.visualstudio.com/1.89.1/linux-deb-$(dpkg --print-architecture)/stable"; then
-        if sudo apt install -y /tmp/code.deb; then
-            echo "✅ VS Code installed successfully"
-        else
-            echo "❌ Failed to install VS Code"
-        fi
-        rm -f /tmp/code.deb
-    else
-        echo "❌ Failed to download VS Code"
-    fi
-fi
-
-# Intellij IDEA
-if command -v idea >/dev/null 2>&1; then
-    echo "🔕 Skip installing Intellij IDEA, already available"
-else
-    echo "🔧 Installing Intellij IDEA"
-    if wget -qO /tmp/idea.tar.gz "https://download.jetbrains.com/idea/ideaIU-2025.1.3-$(uname -m).tar.gz"; then
-        tar -xzf /tmp/idea.tar.gz -C /opt/
-        EXTRACTED_DIR=$(tar -tf /tmp/idea.tar.gz | head -1 | cut -f1 -d"/")
-        sudo mv /opt/"${EXTRACTED_DIR}" /opt/intellij-idea-ultimate
-        sudo ln -sf /opt/intellij-idea-ultimate/bin/idea.sh /usr/local/bin/idea
-        rm -f /tmp/idea.tar.gz
-
-        echo "✅ IntelliJ IDEA installed successfully"
-    else
-        echo "❌ Failed to download Intellij IDEA"
-    fi
-fi
-
 # Set up SSH keys
 eval $(keychain --eval --agents ssh id_ed25519_personal id_ed25519_work)
 KEYCHAIN_ENV="/root/.keychain/$(hostname)-sh"
@@ -257,6 +194,7 @@ fi
 "${scripts_dir}"/clone-repo.sh git@github.com:ip812/go-template.git ip812/go-template
 "${scripts_dir}"/clone-repo.sh git@github.com:ip812/lambdas.git ip812/lambdas
 "${scripts_dir}"/clone-repo.sh git@github.com:ip812/blog.git ip812/blog
+"${scripts_dir}"/clone-repo.sh git@github.com:ip812/terraform-provider-gitsync.git ip812/terraform-provider-gitsync
 
 # avalon repos
 "${scripts_dir}"/clone-repo.sh git@github.com:avalonpharma/infra.git avalonpharma/infra
@@ -279,11 +217,13 @@ cpx_pat="$(tr -d '\n' < /projects/common/vault/auth_codes/cpx-gitlab.txt)"
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GXrestricted/infrastructure/elk.git work/elk
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GXrestricted/infrastructure/status-page.git work/status-page
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GXrestricted/infrastructure/tools.git work/tools
+"${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GXrestricted/infrastructure/lambdas.git work/lambdas
 
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GX/Infrastructure/infratools/jfrogpoc.git work/jfrogpoc
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GX/portal/qa/q00-cpx-sup-cd.git work/q00-cpx-sup-cd
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GX/portal/qa/q00-cpx-sso-cd.git work/q00-cpx-sso-cd
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GX/portal/qa/qa-cpx-tso-cd.git work/qa-cpx-tso-cd
+"${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GX/cpx.energy/releasenotes.git work/releasenotes
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GX/cpx.energy/sso/clui-clws-containerizer-sso.git work/clui-clws-containerizer-sso
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GX/cpx.energy/sup/clui-clws-containerizer-sup.git work/clui-clws-containerizer-sup
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GX/cpx.energy/tso/clui-clws-containerizer-tso.git work/clui-clws-containerizer-tso
