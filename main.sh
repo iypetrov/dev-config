@@ -200,6 +200,7 @@ fi
 "${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/opentelemetry-collector-contrib.git git@github.com:open-telemetry/opentelemetry-collector-contrib.git oss/opentelemetry-collector-contrib
 "${scripts_dir}"/clone-repo.sh https://github.com/terraform-aws-modules/terraform-aws-eks.git oss/terraform-aws-eks
 "${scripts_dir}"/clone-repo.sh https://github.com/aws/karpenter-provider-aws.git oss/karpenter-provider-aws
+"${scripts_dir}"/clone-repo.sh https://github.com/grafana/alloy-scenarios.git oss/alloy-scenarios
 
 # work repos
 cpx_pat="$(tr -d '\n' < /projects/common/vault/auth_codes/cpx-gitlab.txt)"
