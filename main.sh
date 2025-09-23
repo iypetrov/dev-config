@@ -44,6 +44,7 @@ apt update
 "${scripts_dir}"/apt-install-dep.sh git-lfs
 "${scripts_dir}"/apt-install-dep.sh ffmpeg
 "${scripts_dir}"/apt-install-dep.sh imagemagick
+"${scripts_dir}"/apt-install-dep.sh subversion
 
 # Git delta
 if ! command -v delta > /dev/null 2>&1; then 
@@ -206,6 +207,7 @@ fi
 cpx_pat="$(tr -d '\n' < /projects/common/vault/auth_codes/cpx-gitlab.txt)"
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/sofia-devs/expense-report/expense-report-be.git work/expense-report-be
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/sofia-devs/expense-report/expense-report-fe.git work/expense-report-fe
+"${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/sofia-devs/expense-report/anonymizing-pg-data.git work/anonymizing-pg-data
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/sofia-devs/icv/icv-be.git work/icv-be
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/sofia-devs/icv/icv-fe.git work/icv-fe
 
