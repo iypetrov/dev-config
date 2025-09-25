@@ -175,7 +175,6 @@ fi
 "${scripts_dir}"/clone-repo.sh git@github.com:iypetrov/aws-playground.git personal/aws-playground
 "${scripts_dir}"/clone-repo.sh git@github.com:iypetrov/k8s-playground.git personal/k8s-playground
 "${scripts_dir}"/clone-repo.sh git@github.com:iypetrov/state-exam.git personal/state-exam
-"${scripts_dir}"/clone-repo.sh git@github.com:iypetrov/url-shortener.git personal/url-shortener
 "${scripts_dir}"/clone-repo.sh git@github.com:iypetrov/static-site-generator.git personal/static-site-generator
 "${scripts_dir}"/clone-repo.sh git@github.com:iypetrov/lambdas.git personal/lambdas
 
