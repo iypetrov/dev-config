@@ -180,6 +180,7 @@ fi
 
 # ip812 repos
 "${scripts_dir}"/clone-repo.sh git@github.com:ip812/infra.git ip812/infra
+"${scripts_dir}"/clone-repo.sh git@github.com:ip812/apps.git ip812/apps
 "${scripts_dir}"/clone-repo.sh git@github.com:ip812/go-template.git ip812/go-template
 "${scripts_dir}"/clone-repo.sh git@github.com:ip812/lambdas.git ip812/lambdas
 "${scripts_dir}"/clone-repo.sh git@github.com:ip812/blog.git ip812/blog
@@ -188,6 +189,8 @@ fi
 # avalon repos
 "${scripts_dir}"/clone-repo.sh git@github.com:avalonpharma/infra.git avalonpharma/infra
 "${scripts_dir}"/clone-repo.sh git@github.com:avalonpharma/avalon-ui.git avalonpharma/avalon-ui
+"${scripts_dir}"/clone-repo.sh git@github.com:avalonpharma/avalon-backoffice.git avalonpharma/avalon-backoffice
+"${scripts_dir}"/clone-repo.sh git@github.com:avalonpharma/avalon-workers.git avalonpharma/avalon-workers
 
 # oss repos
 "${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/jaeger.git git@github.com:jaegertracing/jaeger.git oss/jaeger
