@@ -203,6 +203,7 @@ fi
 "${scripts_dir}"/clone-repo.sh https://github.com/terraform-aws-modules/terraform-aws-eks.git oss/terraform-aws-eks
 "${scripts_dir}"/clone-repo.sh https://github.com/aws/karpenter-provider-aws.git oss/karpenter-provider-aws
 "${scripts_dir}"/clone-repo.sh https://github.com/grafana/alloy-scenarios.git oss/alloy-scenarios
+"${scripts_dir}"/clone-repo.sh https://github.com/grafana/k8s-monitoring-helm.git oss/k8s-monitoring-helm
 
 # work repos
 cpx_pat="$(tr -d '\n' < /projects/common/vault/auth_codes/cpx-gitlab.txt)"
