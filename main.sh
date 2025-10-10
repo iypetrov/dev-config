@@ -188,9 +188,7 @@ fi
 
 # avalon repos
 "${scripts_dir}"/clone-repo.sh git@github.com:avalonpharma/infra.git avalonpharma/infra
-"${scripts_dir}"/clone-repo.sh git@github.com:avalonpharma/avalon-ui.git avalonpharma/avalon-ui
-"${scripts_dir}"/clone-repo.sh git@github.com:avalonpharma/avalon-backoffice.git avalonpharma/avalon-backoffice
-"${scripts_dir}"/clone-repo.sh git@github.com:avalonpharma/avalon-workers.git avalonpharma/avalon-workers
+"${scripts_dir}"/clone-repo.sh git@github.com:avalonpharma/avalon-fullstack.git avalonpharma/avalon-fullstack
 
 # oss repos
 "${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/jaeger.git git@github.com:jaegertracing/jaeger.git oss/jaeger
@@ -240,3 +238,4 @@ cpx_pat="$(tr -d '\n' < /projects/common/vault/auth_codes/cpx-gitlab.txt)"
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GX/Infrastructure/infratools/infratools-ci-components.git work/infratools-ci-components
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GX/Infrastructure/infratools/migration-innersource-oci-to-aws-ecr-poc.git work/migration-innersource-oci-to-aws-ecr-poc
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GXrestricted/infrastructure/apps.git work/apps
+"${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GX/Infrastructure/infratools/apps-poc.git work/apps-poc
