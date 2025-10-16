@@ -177,6 +177,7 @@ fi
 "${scripts_dir}"/clone-repo.sh git@github.com:iypetrov/state-exam.git personal/state-exam
 "${scripts_dir}"/clone-repo.sh git@github.com:iypetrov/static-site-generator.git personal/static-site-generator
 "${scripts_dir}"/clone-repo.sh git@github.com:iypetrov/lambdas.git personal/lambdas
+"${scripts_dir}"/clone-repo.sh git@github.com:iypetrov/ansible-with-tailscale.git personal/ansible-with-tailscale
 
 # ip812 repos
 "${scripts_dir}"/clone-repo.sh git@github.com:ip812/infra.git ip812/infra
