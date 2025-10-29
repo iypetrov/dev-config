@@ -1,9 +1,10 @@
 {
   "packages": [
     "gopls@0.18.1",
-    "go@1.24.3",
+    "go@1.24.8",
     "goimports@2021-01-13",
     "govulncheck@1.1.4",
+    "golangci-lint@2.5.0",
     "air@1.62.0",
     "sqlc@1.29.0",
     "templ@0.3.865",
@@ -16,7 +17,9 @@
     "nodejs@24.1.0",
 
     "python@3.13.3",
+    "pyenv@2.6.8",
     "pipenv@2025.0.3",
+    "virtualenv@20.33.1",
 
     "openjdk@17.0.1",
     "maven@3.9.9",
@@ -40,6 +43,6 @@
   "shell": {
         "init_hook": [
             "tmux"
-        ],
+        ]
    }
 }

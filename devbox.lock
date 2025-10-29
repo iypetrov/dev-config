@@ -213,51 +213,51 @@
       "last_modified": "2025-06-14T12:19:57Z",
       "resolved": "github:NixOS/nixpkgs/41da1e3ea8e23e094e5e3eeb1e6b830468a7399e?lastModified=1749903597&narHash=sha256-jp0D4vzBcRKwNZwfY4BcWHemLGUs4JrS3X9w5k%2FJYDA%3D"
     },
-    "go@1.24.3": {
-      "last_modified": "2025-05-16T20:19:48Z",
-      "resolved": "github:NixOS/nixpkgs/12a55407652e04dcf2309436eb06fef0d3713ef3#go",
+    "go@1.24.8": {
+      "last_modified": "2025-10-08T10:03:27Z",
+      "resolved": "github:NixOS/nixpkgs/fb5cf53218b987f2703a5bbc292a030c0fe33443#go_1_24",
       "source": "devbox-search",
-      "version": "1.24.3",
+      "version": "1.24.8",
       "systems": {
         "aarch64-darwin": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/ps3admpzmc1ryvn9q7sw5xfd94dkrb3f-go-1.24.3",
+              "path": "/nix/store/yz9x0ddjyglwj4i94i1cd5bpvqhpncpz-go-1.24.8",
               "default": true
             }
           ],
-          "store_path": "/nix/store/ps3admpzmc1ryvn9q7sw5xfd94dkrb3f-go-1.24.3"
+          "store_path": "/nix/store/yz9x0ddjyglwj4i94i1cd5bpvqhpncpz-go-1.24.8"
         },
         "aarch64-linux": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/45bnqhyyq40p91k3cjw0farx3hn1swx6-go-1.24.3",
+              "path": "/nix/store/gqsr05vjawg412kdd9gcf6sa8kks6y8l-go-1.24.8",
               "default": true
             }
           ],
-          "store_path": "/nix/store/45bnqhyyq40p91k3cjw0farx3hn1swx6-go-1.24.3"
+          "store_path": "/nix/store/gqsr05vjawg412kdd9gcf6sa8kks6y8l-go-1.24.8"
         },
         "x86_64-darwin": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/9z2kb6hxij7pqi0fgcn9ijhpb7ajpazs-go-1.24.3",
+              "path": "/nix/store/q7iapfpqi0z357vvs20id85727153npg-go-1.24.8",
               "default": true
             }
           ],
-          "store_path": "/nix/store/9z2kb6hxij7pqi0fgcn9ijhpb7ajpazs-go-1.24.3"
+          "store_path": "/nix/store/q7iapfpqi0z357vvs20id85727153npg-go-1.24.8"
         },
         "x86_64-linux": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/5xvi25nqmbrg58aixp4zgczilfnp7pwg-go-1.24.3",
+              "path": "/nix/store/9bvzhk0wjvxzpsqiaybgc6ggrjjibhrb-go-1.24.8",
               "default": true
             }
           ],
-          "store_path": "/nix/store/5xvi25nqmbrg58aixp4zgczilfnp7pwg-go-1.24.3"
+          "store_path": "/nix/store/9bvzhk0wjvxzpsqiaybgc6ggrjjibhrb-go-1.24.8"
         }
       }
     },
@@ -266,6 +266,54 @@
       "resolved": "github:NixOS/nixpkgs/3a641defd170a4ef25ce8c7c64cb13f91f867fca#goimports",
       "source": "devbox-search",
       "version": "2021-01-13"
+    },
+    "golangci-lint@2.5.0": {
+      "last_modified": "2025-10-07T08:41:47Z",
+      "resolved": "github:NixOS/nixpkgs/bce5fe2bb998488d8e7e7856315f90496723793c#golangci-lint",
+      "source": "devbox-search",
+      "version": "2.5.0",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/15bzlcc1h11sv9vwawrnfcw0avn3nhlw-golangci-lint-2.5.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/15bzlcc1h11sv9vwawrnfcw0avn3nhlw-golangci-lint-2.5.0"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/60qpwfy5bac8lflw12kffxdhvvylsr4k-golangci-lint-2.5.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/60qpwfy5bac8lflw12kffxdhvvylsr4k-golangci-lint-2.5.0"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/laxn1i91p32i319i5ixslxz4bl451hvq-golangci-lint-2.5.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/laxn1i91p32i319i5ixslxz4bl451hvq-golangci-lint-2.5.0"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/s95zr6py9ppj3hpm295mdzs40q59177p-golangci-lint-2.5.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/s95zr6py9ppj3hpm295mdzs40q59177p-golangci-lint-2.5.0"
+        }
+      }
     },
     "gopls@0.18.1": {
       "last_modified": "2025-05-16T20:19:48Z",
@@ -1078,6 +1126,54 @@
         }
       }
     },
+    "pyenv@2.6.8": {
+      "last_modified": "2025-10-07T08:41:47Z",
+      "resolved": "github:NixOS/nixpkgs/bce5fe2bb998488d8e7e7856315f90496723793c#pyenv",
+      "source": "devbox-search",
+      "version": "2.6.8",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/kw0q8861c1c5fi61x68pq4p9ly1dnh1i-pyenv-2.6.8",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/kw0q8861c1c5fi61x68pq4p9ly1dnh1i-pyenv-2.6.8"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/7jy09d3zdzan1cq5qfvf3k5j2n6nvn59-pyenv-2.6.8",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/7jy09d3zdzan1cq5qfvf3k5j2n6nvn59-pyenv-2.6.8"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/nfp6j2a0rbkfpvqfiywjh9i5y4x57208-pyenv-2.6.8",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/nfp6j2a0rbkfpvqfiywjh9i5y4x57208-pyenv-2.6.8"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/cdvxl2hm3rg996s3q45dgd26b1wjhxl3-pyenv-2.6.8",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/cdvxl2hm3rg996s3q45dgd26b1wjhxl3-pyenv-2.6.8"
+        }
+      }
+    },
     "python@3.13.3": {
       "last_modified": "2025-05-16T20:19:48Z",
       "plugin_version": "0.0.4",
@@ -1324,6 +1420,70 @@
             }
           ],
           "store_path": "/nix/store/ngq7g491c89m02lwv1rjcdvr9nbj7x1z-terraform-1.11.4"
+        }
+      }
+    },
+    "virtualenv@20.33.1": {
+      "last_modified": "2025-10-07T08:41:47Z",
+      "resolved": "github:NixOS/nixpkgs/bce5fe2bb998488d8e7e7856315f90496723793c#virtualenv",
+      "source": "devbox-search",
+      "version": "20.33.1",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/w8wkbkkp16qkdn8hpnnqn281m1v8v5ij-python3.13-virtualenv-20.33.1",
+              "default": true
+            },
+            {
+              "name": "dist",
+              "path": "/nix/store/jcylnarww123r0iafhihqkdz0y91a808-python3.13-virtualenv-20.33.1-dist"
+            }
+          ],
+          "store_path": "/nix/store/w8wkbkkp16qkdn8hpnnqn281m1v8v5ij-python3.13-virtualenv-20.33.1"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/qhgpzk9h3c8x4ns8qr8siq64xpzs5gyq-python3.13-virtualenv-20.33.1",
+              "default": true
+            },
+            {
+              "name": "dist",
+              "path": "/nix/store/796rp8h4lizwc2irlmjnsyrbar0qs308-python3.13-virtualenv-20.33.1-dist"
+            }
+          ],
+          "store_path": "/nix/store/qhgpzk9h3c8x4ns8qr8siq64xpzs5gyq-python3.13-virtualenv-20.33.1"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/9kp0az0192rw5fw37x61a1n2h14rf41x-python3.13-virtualenv-20.33.1",
+              "default": true
+            },
+            {
+              "name": "dist",
+              "path": "/nix/store/r0rjj75il89rxcyjf8x0ifk72zwhz7i3-python3.13-virtualenv-20.33.1-dist"
+            }
+          ],
+          "store_path": "/nix/store/9kp0az0192rw5fw37x61a1n2h14rf41x-python3.13-virtualenv-20.33.1"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/519s7zvnphcxvvxfjh506pp1zpk868w9-python3.13-virtualenv-20.33.1",
+              "default": true
+            },
+            {
+              "name": "dist",
+              "path": "/nix/store/1lam3x1zx19ldr3865fxjl9fjm7vhngi-python3.13-virtualenv-20.33.1-dist"
+            }
+          ],
+          "store_path": "/nix/store/519s7zvnphcxvvxfjh506pp1zpk868w9-python3.13-virtualenv-20.33.1"
         }
       }
     }
