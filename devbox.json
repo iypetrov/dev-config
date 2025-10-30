@@ -29,7 +29,6 @@
     "kubectl@1.33.1",
     "kubernetes-helm@3.18.2",
     "kubectx@0.9.5",
-    "k9s@0.50.6",
 
     "awscli2@2.27.2",
     "ssm-session-manager-plugin@1.2.707.0",
