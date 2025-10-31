@@ -45,6 +45,7 @@ apt update
 "${scripts_dir}"/apt-install-dep.sh ffmpeg
 "${scripts_dir}"/apt-install-dep.sh imagemagick
 "${scripts_dir}"/apt-install-dep.sh subversion
+"${scripts_dir}"/apt-install-dep.sh busybox-static
 
 # Git delta
 if ! command -v delta > /dev/null 2>&1; then 
@@ -178,6 +179,8 @@ fi
 "${scripts_dir}"/clone-repo.sh git@github.com:iypetrov/static-site-generator.git personal/static-site-generator
 "${scripts_dir}"/clone-repo.sh git@github.com:iypetrov/lambdas.git personal/lambdas
 "${scripts_dir}"/clone-repo.sh git@github.com:iypetrov/ansible-with-tailscale.git personal/ansible-with-tailscale
+"${scripts_dir}"/clone-repo.sh git@github.com:iypetrov/sopra-steria-dev-team-day-bash-scripts.git personal/sopra-steria-dev-team-day-bash-scripts
+"${scripts_dir}"/clone-repo.sh git@github.com:iypetrov/sopra-steria-dev-team-day-containers-anatomy.git personal/sopra-steria-dev-team-day-containers-anatomy
 
 # ip812 repos
 "${scripts_dir}"/clone-repo.sh git@github.com:ip812/infra.git ip812/infra
@@ -242,3 +245,4 @@ cpx_pat="$(tr -d '\n' < /projects/common/vault/auth_codes/cpx-gitlab.txt)"
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GX/Infrastructure/infratools/migration-innersource-oci-to-aws-ecr-poc.git work/migration-innersource-oci-to-aws-ecr-poc
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GXrestricted/infrastructure/apps.git work/apps
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GX/Infrastructure/infratools/apps-poc.git work/apps-poc
+"${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GX/tools/keycloak.git work/keycloak
