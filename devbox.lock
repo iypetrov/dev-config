@@ -459,54 +459,6 @@
         }
       }
     },
-    "hugo@0.148.1": {
-      "last_modified": "2025-07-13T22:45:35Z",
-      "resolved": "github:NixOS/nixpkgs/a421ac6595024edcfbb1ef950a3712b89161c359#hugo",
-      "source": "devbox-search",
-      "version": "0.148.1",
-      "systems": {
-        "aarch64-darwin": {
-          "outputs": [
-            {
-              "name": "out",
-              "path": "/nix/store/4md0rqs1b9kapmy10g8sd6vb4nni3ybc-hugo-0.148.1",
-              "default": true
-            }
-          ],
-          "store_path": "/nix/store/4md0rqs1b9kapmy10g8sd6vb4nni3ybc-hugo-0.148.1"
-        },
-        "aarch64-linux": {
-          "outputs": [
-            {
-              "name": "out",
-              "path": "/nix/store/7faakqrln5klfqmpyv2nc3s39n4s0998-hugo-0.148.1",
-              "default": true
-            }
-          ],
-          "store_path": "/nix/store/7faakqrln5klfqmpyv2nc3s39n4s0998-hugo-0.148.1"
-        },
-        "x86_64-darwin": {
-          "outputs": [
-            {
-              "name": "out",
-              "path": "/nix/store/sxyfxn3lzdxq97p1mirzkssrra3apypv-hugo-0.148.1",
-              "default": true
-            }
-          ],
-          "store_path": "/nix/store/sxyfxn3lzdxq97p1mirzkssrra3apypv-hugo-0.148.1"
-        },
-        "x86_64-linux": {
-          "outputs": [
-            {
-              "name": "out",
-              "path": "/nix/store/w4awv0aifpbwv5yvdqf09b0pm1krsc9n-hugo-0.148.1",
-              "default": true
-            }
-          ],
-          "store_path": "/nix/store/w4awv0aifpbwv5yvdqf09b0pm1krsc9n-hugo-0.148.1"
-        }
-      }
-    },
     "kubectl@1.33.1": {
       "last_modified": "2025-05-24T21:46:02Z",
       "resolved": "github:NixOS/nixpkgs/edb3633f9100d9277d1c9af245a4e9337a980c07#kubectl",
@@ -732,6 +684,54 @@
             }
           ],
           "store_path": "/nix/store/vzx36lvpjzsinzw6hkhklpc4yfs8f3pn-maven-3.9.9"
+        }
+      }
+    },
+    "nerd-font-patcher@3.4.0": {
+      "last_modified": "2025-10-22T20:59:19Z",
+      "resolved": "github:NixOS/nixpkgs/01b6809f7f9d1183a2b3e081f0a1e6f8f415cb09#nerd-font-patcher",
+      "source": "devbox-search",
+      "version": "3.4.0",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/q53byg5xjac0awmbkj7va19qgpgip790-nerd-font-patcher-3.4.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/q53byg5xjac0awmbkj7va19qgpgip790-nerd-font-patcher-3.4.0"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/3036dk9ay0lxlsy1d39l18xmf401hwbw-nerd-font-patcher-3.4.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/3036dk9ay0lxlsy1d39l18xmf401hwbw-nerd-font-patcher-3.4.0"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/ygzxjm59yinvvini9j509gcx81cbwfw4-nerd-font-patcher-3.4.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/ygzxjm59yinvvini9j509gcx81cbwfw4-nerd-font-patcher-3.4.0"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/xm63j18z45qs72hhpb86khr4ajxjkk6w-nerd-font-patcher-3.4.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/xm63j18z45qs72hhpb86khr4ajxjkk6w-nerd-font-patcher-3.4.0"
         }
       }
     },
