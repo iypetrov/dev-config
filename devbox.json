@@ -1,5 +1,8 @@
 {
   "packages": [
+    "neovim@0.11.4",
+    "nerd-font-patcher@3.4.0",
+
     "gopls@0.18.1",
     "go@1.24.8",
     "goimports@2021-01-13",
@@ -27,17 +30,16 @@
     "terraform@1.11.4",
 
     "kubectl@1.33.1",
-    "kubernetes-helm@3.18.2",
     "kubectx@0.9.5",
+    "kustomize@5.7.1",
+    "kubernetes-helm@3.18.2",
 
     "awscli2@2.27.2",
     "ssm-session-manager-plugin@1.2.707.0",
 
     "openshift@4.16.0",
     "argocd@3.1.6",
-    "fluxcd@2.6.4",
-
-    "nerd-font-patcher@3.4.0"
+    "fluxcd@2.6.4"
   ],
   "shell": {
         "init_hook": [
