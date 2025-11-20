@@ -46,6 +46,19 @@ apt update
 "${scripts_dir}"/apt-install-dep.sh imagemagick
 "${scripts_dir}"/apt-install-dep.sh subversion
 "${scripts_dir}"/apt-install-dep.sh busybox-static
+"${scripts_dir}"/apt-install-dep.sh polybar
+"${scripts_dir}"/apt-install-dep.sh alacritty
+
+# Font
+font_name="JetBrainsMono"
+fonts_dir="/home/ipetrov/.local/share/fonts"
+if [[ -d "${fonts_dir}/${font_name}" ]]; then
+    echo "🔕 Font ${font_name} was already installed"
+else
+    wget -P "${fonts_dir}" "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/${font_name}.zip"
+    unzip "${fonts_dir}/${font_name}.zip" -d "${fonts_dir}/${font_name}"
+    echo "✅ Font ${font_name} installed successfully"
+fi
 
 # Git delta
 if ! command -v delta > /dev/null 2>&1; then 
@@ -124,7 +137,9 @@ do_dotfiles_setup() {
     cd "${prj_dir}/common"
     stow --target=/root .dotfiles
     mkdir -p "/home/ipetrov/.config/i3"
-    cp "/projects/common/.dotfiles/.config/i3/config" "/home/ipetrov/.config/i3/config"
+    cp "${prj_dir}/common/.dotfiles/.config/i3/config" "/home/ipetrov/.config/i3/config"
+    mkdir -p "/home/ipetrov/.config/alacritty"
+    cp "${prj_dir}/common/.dotfiles/.config/alacritty/alacritty.toml" "/home/ipetrov/.config/alacritty/alacritty.toml"
     cd "${prj_dir}/common/.dotfiles"
     git remote set-url origin git@github.com:iypetrov/.dotfiles.git
     cd "${curr_dir}"
