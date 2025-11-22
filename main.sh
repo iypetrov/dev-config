@@ -47,6 +47,7 @@ apt update
 "${scripts_dir}"/apt-install-dep.sh subversion
 "${scripts_dir}"/apt-install-dep.sh busybox-static
 "${scripts_dir}"/apt-install-dep.sh polybar
+"${scripts_dir}"/apt-install-dep.sh rofi
 "${scripts_dir}"/apt-install-dep.sh alacritty
 
 # Font
@@ -140,6 +141,8 @@ do_dotfiles_setup() {
     cp "${prj_dir}/common/.dotfiles/.config/i3/config" "/home/ipetrov/.config/i3/config"
     mkdir -p "/home/ipetrov/.config/alacritty"
     cp "${prj_dir}/common/.dotfiles/.config/alacritty/alacritty.toml" "/home/ipetrov/.config/alacritty/alacritty.toml"
+    mkdir -p "/home/ipetrov/.config/rofi"
+    cp "${prj_dir}/common/.dotfiles/.config/rofi/config.rasi" "/home/ipetrov/.config/rofi/config.rasi"
     cd "${prj_dir}/common/.dotfiles"
     git remote set-url origin git@github.com:iypetrov/.dotfiles.git
     cd "${curr_dir}"
