@@ -36,6 +36,7 @@ apt update
 "${scripts_dir}"/apt-install-dep.sh postgresql-client
 "${scripts_dir}"/apt-install-dep.sh i3
 "${scripts_dir}"/apt-install-dep.sh xclip
+"${scripts_dir}"/apt-install-dep.sh xsel
 "${scripts_dir}"/apt-install-dep.sh tree
 "${scripts_dir}"/apt-install-dep.sh keychain
 "${scripts_dir}"/apt-install-dep.sh fuse
@@ -213,6 +214,7 @@ fi
 
 # oss repos
 "${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/jaeger.git git@github.com:jaegertracing/jaeger.git oss/jaeger
+"${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/external-secrets.git git@github.com:external-secrets/external-secrets.git oss/external-secrets
 "${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/jaeger-idl.git git@github.com:jaegertracing/jaeger-idl.git oss/jaeger-idl
 "${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/jaeger-ui.git git@github.com:jaegertracing/jaeger-ui.git oss/jaeger-ui
 "${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/jaeger-operator.git git@github.com:jaegertracing/jaeger-operator.git oss/jaeger-operator
@@ -224,6 +226,7 @@ fi
 "${scripts_dir}"/clone-repo.sh https://github.com/aws/karpenter-provider-aws.git oss/karpenter-provider-aws
 "${scripts_dir}"/clone-repo.sh https://github.com/grafana/alloy-scenarios.git oss/alloy-scenarios
 "${scripts_dir}"/clone-repo.sh https://github.com/grafana/k8s-monitoring-helm.git oss/k8s-monitoring-helm
+"${scripts_dir}"/clone-repo.sh https://github.com/hashicorp/terraform-provider-aws.git oss/terraform-provider-aws
 
 # work repos
 cpx_pat="$(tr -d '\n' < /projects/common/vault/auth_codes/cpx-gitlab.txt)"
@@ -257,9 +260,13 @@ cpx_pat="$(tr -d '\n' < /projects/common/vault/auth_codes/cpx-gitlab.txt)"
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GX/cpx.energy/sso/deploy.git work/sso-deploy
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GX/cpx.energy/sup/deploy.git work/sup-deploy
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GX/cpx.energy/tso/deploy.git work/tso-deploy
+"${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GX/cpx.energy/deploy.git work/cpx-deploy
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GX/Infrastructure/infratools/dbs-investigation.git work/dbs-investigation
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GX/Infrastructure/infratools/infratools-ci-components.git work/infratools-ci-components
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GX/Infrastructure/infratools/migration-innersource-oci-to-aws-ecr-poc.git work/migration-innersource-oci-to-aws-ecr-poc
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GXrestricted/infrastructure/apps.git work/apps
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GX/Infrastructure/infratools/apps-poc.git work/apps-poc
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GX/tools/keycloak.git work/keycloak
+"${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GX/Core-X/corex.git work/corex
+"${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GXrestricted/infrastructure/terraform/tf-ci-library.git work/tf-ci-library
+"${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GX/REPORT/trafo-service.git work/trafo-service
