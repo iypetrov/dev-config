@@ -46,7 +46,9 @@
 
     "openshift@4.16.0",
     "argocd@3.1.6",
-    "fluxcd@2.6.4"
+    "fluxcd@2.6.4",
+
+    "sonar-scanner-cli@7.3.0.5189"
   ],
   "shell": {
         "init_hook": [
