@@ -49,6 +49,7 @@ apt update
 "${scripts_dir}"/apt-install-dep.sh polybar
 "${scripts_dir}"/apt-install-dep.sh rofi
 "${scripts_dir}"/apt-install-dep.sh alacritty
+"${scripts_dir}"/apt-install-dep.sh graphviz
 
 # Font
 font_name="JetBrainsMono"
@@ -227,6 +228,7 @@ fi
 "${scripts_dir}"/clone-repo.sh https://github.com/grafana/alloy-scenarios.git oss/alloy-scenarios
 "${scripts_dir}"/clone-repo.sh https://github.com/grafana/k8s-monitoring-helm.git oss/k8s-monitoring-helm
 "${scripts_dir}"/clone-repo.sh https://github.com/hashicorp/terraform-provider-aws.git oss/terraform-provider-aws
+"${scripts_dir}"/clone-repo.sh https://github.com/Wyatt915/fireplace.git oss/fireplace
 
 # work repos
 cpx_pat="$(tr -d '\n' < /projects/common/vault/auth_codes/cpx-gitlab.txt)"
