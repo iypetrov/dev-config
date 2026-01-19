@@ -49,6 +49,7 @@
     "argocd@3.1.6",
     "fluxcd@2.6.4",
 
+    "hugo@0.124.1",
     "sonar-scanner-cli@7.3.0.5189"
   ],
   "shell": {
