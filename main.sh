@@ -51,6 +51,7 @@ apt update
 "${scripts_dir}"/apt-install-dep.sh alacritty
 "${scripts_dir}"/apt-install-dep.sh graphviz
 "${scripts_dir}"/apt-install-dep.sh apache2-utils
+"${scripts_dir}"/apt-install-dep.sh mariadb-client
 
 # Font
 font_name="JetBrainsMono"
