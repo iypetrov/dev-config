@@ -40,7 +40,7 @@ apt update
 "${scripts_dir}"/apt-install-dep.sh tree
 "${scripts_dir}"/apt-install-dep.sh keychain
 "${scripts_dir}"/apt-install-dep.sh fuse
-"${scripts_dir}"/apt-install-dep.sh libfuse2
+# "${scripts_dir}"/apt-install-dep.sh libfuse2
 "${scripts_dir}"/apt-install-dep.sh git-lfs
 "${scripts_dir}"/apt-install-dep.sh ffmpeg
 "${scripts_dir}"/apt-install-dep.sh imagemagick
@@ -205,6 +205,7 @@ fi
 "${scripts_dir}"/clone-repo.sh git@github.com:ip812/lambdas.git ip812/lambdas
 "${scripts_dir}"/clone-repo.sh git@github.com:ip812/blog.git ip812/blog
 "${scripts_dir}"/clone-repo.sh git@github.com:ip812/terraform-provider-gitsync.git ip812/terraform-provider-gitsync
+"${scripts_dir}"/clone-repo.sh git@github.com:ip812/family-drive.git ip812/family-drive
 
 # avalon repos
 "${scripts_dir}"/clone-repo.sh git@github.com:avalonpharma/infra.git avalonpharma/infra
@@ -218,6 +219,10 @@ fi
 "${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/helm-charts.git git@github.com:jaegertracing/helm-charts.git oss/jaeger-helm-charts
 "${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/opentelemetry-operator.git git@github.com:open-telemetry/opentelemetry-operator.git oss/opentelemetry-operator
 "${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/opentelemetry-collector-contrib.git git@github.com:open-telemetry/opentelemetry-collector-contrib.git oss/opentelemetry-collector-contrib
+
+"${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/gardener.git git@github.com:gardener/gardener.git oss/gardener
+"${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/gardener-extension-shoot-networking-filter.git git@github.com:gardener/gardener-extension-shoot-networking-filter.git oss/gardener-extension-shoot-networking-filter master
+"${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/gardener-extension-provider-aws.git git@github.com:gardener/gardener-extension-provider-aws.git oss/gardener-extension-provider-aws master
 
 # work repos
 cpx_pat="$(tr -d '\n' < /projects/common/vault/auth_codes/cpx-gitlab.txt)"
@@ -243,3 +248,4 @@ cpx_pat="$(tr -d '\n' < /projects/common/vault/auth_codes/cpx-gitlab.txt)"
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GX/tools/keycloak.git work/keycloak
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GXrestricted/infrastructure/apps.git work/apps
 "${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GXrestricted/infrastructure/terraform/tf-ci-library.git work/tf-ci-library
+"${scripts_dir}"/clone-repo.sh https://ilia.petrov:${cpx_pat}@innersource.soprasteria.com/ENER-GX/Infrastructure/infratools/testops-poc.git work/testops-poc
