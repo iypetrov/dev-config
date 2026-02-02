@@ -224,5 +224,6 @@ fi
 "${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/gardener.git git@github.com:gardener/gardener.git oss/gardener
 "${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/gardener-extension-shoot-networking-filter.git git@github.com:gardener/gardener-extension-shoot-networking-filter.git oss/gardener-extension-shoot-networking-filter master
 "${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/gardener-extension-provider-aws.git git@github.com:gardener/gardener-extension-provider-aws.git oss/gardener-extension-provider-aws master
+"${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/gardener-extension-otelcol.git git@github.com:gardener/gardener-extension-otelcol.git oss/gardener-extension-otelcol
 
 bash work_repos.sh "${scripts_dir}"
