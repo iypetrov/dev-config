@@ -31,8 +31,9 @@ sudo su -
 If you want to bootstrap your system use
 ```bash
 apt update
-apt install -y git open-vm-tools open-vm-tools-desktop
 # this line may change depending on what hypervisor you use, in this case it is VMware Fusion
+apt install -y git open-vm-tools open-vm-tools-desktop
+
 git clone https://github.com/iypetrov/dev-config.git /projects/common/dev-config
 cd /projects/common/dev-config
 git remote set-url origin git@github.com:iypetrov/dev-config.git
