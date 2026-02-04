@@ -1,6 +1,5 @@
 {
   "packages": [
-    "neovim@0.11.5",
     "lazygit@0.56.0",
 
     "gopls@0.18.1",
@@ -23,9 +22,6 @@
     "python@3.13.3",
     "python313Packages.pip@25.0.1",
     "python313Packages.python-lsp-server@1.12.2",
-    "pyenv@2.6.8",
-    "pipenv@2025.0.3",
-    "virtualenv@20.33.1",
 
     "openjdk@17.0.1",
     "maven@3.9.9",
@@ -40,17 +36,11 @@
     "kubectx@0.9.5",
     "kustomize@5.7.1",
     "kubernetes-helm@3.18.2",
-    "k9s@0.50.6",
 
     "awscli2@2.27.2",
     "ssm-session-manager-plugin@1.2.707.0",
 
-    "openshift@4.16.0",
-    "argocd@3.1.6",
-    "fluxcd@2.6.4",
-
-    "hugo@0.124.1",
-    "sonar-scanner-cli@7.3.0.5189"
+    "fluxcd@2.6.4"
   ],
   "shell": {
         "init_hook": [
