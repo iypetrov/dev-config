@@ -939,6 +939,54 @@
         }
       }
     },
+    "opentelemetry-collector-builder@0.144.0": {
+      "last_modified": "2026-01-30T02:32:49Z",
+      "resolved": "github:NixOS/nixpkgs/6308c3b21396534d8aaeac46179c14c439a89b8a#opentelemetry-collector-builder",
+      "source": "devbox-search",
+      "version": "0.144.0",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/m8vf83wshsjs641dn9xc1pyaskck3926-ocb-0.144.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/m8vf83wshsjs641dn9xc1pyaskck3926-ocb-0.144.0"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/cq1y1bcr59pz29nxdk7zgwrcr52mbgp0-ocb-0.144.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/cq1y1bcr59pz29nxdk7zgwrcr52mbgp0-ocb-0.144.0"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/8d6jjm16j9fiwj9hnic2xkdy33pifny9-ocb-0.144.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/8d6jjm16j9fiwj9hnic2xkdy33pifny9-ocb-0.144.0"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/ngy86xlab1bnb46wqifnyc2b2gdcxbqy-ocb-0.144.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/ngy86xlab1bnb46wqifnyc2b2gdcxbqy-ocb-0.144.0"
+        }
+      }
+    },
     "protobuf@31.1": {
       "last_modified": "2025-07-28T17:09:23Z",
       "resolved": "github:NixOS/nixpkgs/648f70160c03151bc2121d179291337ad6bc564b#protobuf",
