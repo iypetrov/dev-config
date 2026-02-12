@@ -197,7 +197,7 @@ fi
 "${scripts_dir}"/clone-repo.sh git@github.com:iypetrov/aws-playground.git personal/aws-playground
 "${scripts_dir}"/clone-repo.sh git@github.com:iypetrov/k8s-playground.git personal/k8s-playground
 "${scripts_dir}"/clone-repo.sh git@github.com:iypetrov/lambdas.git personal/lambdas
-"${scripts_dir}"/clone-repo.sh git@github.com:iypetrov/otlp-backend.git personal/otlp-backend
+"${scripts_dir}"/clone-repo.sh git@github.com:iypetrov/o11y-operator.git personal/o11y-operator
 
 # ip812 repos
 "${scripts_dir}"/clone-repo.sh git@github.com:ip812/infra.git ip812/infra
