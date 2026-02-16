@@ -27,6 +27,7 @@ apt update
 "${scripts_dir}"/apt-install-dep.sh make
 "${scripts_dir}"/apt-install-dep.sh software-properties-common
 "${scripts_dir}"/apt-install-dep.sh docker.io
+"${scripts_dir}"/apt-install-dep.sh docker-buildx
 "${scripts_dir}"/apt-install-dep.sh bat
 "${scripts_dir}"/apt-install-dep.sh silversearcher-ag
 "${scripts_dir}"/apt-install-dep.sh jq
