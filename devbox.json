@@ -37,6 +37,8 @@
     "kubectx@0.9.5",
     "kustomize@5.7.1",
     "kubernetes-helm@3.18.2",
+    "kind@0.31.0",
+    "kubebuilder@4.10.1",
 
     "awscli2@2.27.2",
     "ssm-session-manager-plugin@1.2.707.0",
