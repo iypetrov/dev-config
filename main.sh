@@ -207,11 +207,6 @@ fi
 "${scripts_dir}"/clone-repo.sh git@github.com:ip812/lambdas.git ip812/lambdas
 "${scripts_dir}"/clone-repo.sh git@github.com:ip812/blog.git ip812/blog
 "${scripts_dir}"/clone-repo.sh git@github.com:ip812/terraform-provider-gitsync.git ip812/terraform-provider-gitsync
-"${scripts_dir}"/clone-repo.sh git@github.com:ip812/family-drive.git ip812/family-drive
-
-# avalon repos
-"${scripts_dir}"/clone-repo.sh git@github.com:avalonpharma/infra.git avalonpharma/infra
-"${scripts_dir}"/clone-repo.sh git@github.com:avalonpharma/avalon-fullstack.git avalonpharma/avalon-fullstack
 
 # oss repos
 "${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/jaeger.git git@github.com:jaegertracing/jaeger.git oss/jaeger
@@ -227,4 +222,4 @@ fi
 "${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/gardener-extension-provider-aws.git git@github.com:gardener/gardener-extension-provider-aws.git oss/gardener-extension-provider-aws master
 "${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/gardener-extension-otelcol.git git@github.com:gardener/gardener-extension-otelcol.git oss/gardener-extension-otelcol
 
-bash work_repos.sh "${scripts_dir}"
+bash private_repos.sh "${scripts_dir}"
