@@ -207,6 +207,7 @@ fi
 "${scripts_dir}"/clone-repo.sh git@github.com:ip812/lambdas.git ip812/lambdas
 "${scripts_dir}"/clone-repo.sh git@github.com:ip812/blog.git ip812/blog
 "${scripts_dir}"/clone-repo.sh git@github.com:ip812/terraform-provider-gitsync.git ip812/terraform-provider-gitsync
+"${scripts_dir}"/clone-repo.sh git@github.com:ip812/family-drive.git ip812/family-drive
 
 # oss repos
 "${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/gardener.git git@github.com:gardener/gardener.git oss/gardener
