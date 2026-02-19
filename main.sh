@@ -209,17 +209,19 @@ fi
 "${scripts_dir}"/clone-repo.sh git@github.com:ip812/terraform-provider-gitsync.git ip812/terraform-provider-gitsync
 
 # oss repos
+"${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/gardener.git git@github.com:gardener/gardener.git oss/gardener
+"${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/enhancements.git git@github.com:gardener/enhancements.git oss/enhancements
+"${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/gardener-extension-shoot-networking-filter.git git@github.com:gardener/gardener-extension-shoot-networking-filter.git oss/gardener-extension-shoot-networking-filter master
+"${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/gardener-extension-provider-aws.git git@github.com:gardener/gardener-extension-provider-aws.git oss/gardener-extension-provider-aws master
+"${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/gardener-extension-otelcol.git git@github.com:gardener/gardener-extension-otelcol.git oss/gardener-extension-otelcol
+
+"${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/opentelemetry-operator.git git@github.com:open-telemetry/opentelemetry-operator.git oss/opentelemetry-operator
+"${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/opentelemetry-collector-contrib.git git@github.com:open-telemetry/opentelemetry-collector-contrib.git oss/opentelemetry-collector-contrib
+
 "${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/jaeger.git git@github.com:jaegertracing/jaeger.git oss/jaeger
 "${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/jaeger-idl.git git@github.com:jaegertracing/jaeger-idl.git oss/jaeger-idl
 "${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/jaeger-ui.git git@github.com:jaegertracing/jaeger-ui.git oss/jaeger-ui
 "${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/jaeger-operator.git git@github.com:jaegertracing/jaeger-operator.git oss/jaeger-operator
 "${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/helm-charts.git git@github.com:jaegertracing/helm-charts.git oss/jaeger-helm-charts
-"${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/opentelemetry-operator.git git@github.com:open-telemetry/opentelemetry-operator.git oss/opentelemetry-operator
-"${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/opentelemetry-collector-contrib.git git@github.com:open-telemetry/opentelemetry-collector-contrib.git oss/opentelemetry-collector-contrib
-
-"${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/gardener.git git@github.com:gardener/gardener.git oss/gardener
-"${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/gardener-extension-shoot-networking-filter.git git@github.com:gardener/gardener-extension-shoot-networking-filter.git oss/gardener-extension-shoot-networking-filter master
-"${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/gardener-extension-provider-aws.git git@github.com:gardener/gardener-extension-provider-aws.git oss/gardener-extension-provider-aws master
-"${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/gardener-extension-otelcol.git git@github.com:gardener/gardener-extension-otelcol.git oss/gardener-extension-otelcol
 
 bash private_repos.sh "${scripts_dir}"
