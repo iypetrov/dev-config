@@ -43,6 +43,8 @@
     "awscli2@2.27.2",
     "ssm-session-manager-plugin@1.2.707.0",
 
+    "hugo@0.155.2",
+
     "fluxcd@2.6.4"
   ],
   "shell": {
