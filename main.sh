@@ -80,18 +80,6 @@ if ! command -v docker-compose > /dev/null 2>&1; then
     docker-compose --version
 fi
 
-# Ngrok
-if snap list | grep -q "^ngrok\s"; then
-    echo "🔕 Skip installing Ngrok, already available"
-else
-    echo "🔧 Installing Ngrok"
-    if snap install ngrok; then
-        echo "✅ Ngrok installed successfully"
-    else
-        echo "❌ Ngrok failed to install"
-    fi
-fi
-
 # Auth
 do_auth_setup() {
     echo "🔧 Setting up auth"
@@ -173,18 +161,6 @@ if ! command -v devbox &>/dev/null; then
 fi
 
 devbox install --config /projects/common/dev-config/devbox.json
-
-# Brave
-if command -v brave-browser &>/dev/null; then
-    echo "🔕 Skip installing Brave, already available"
-else
-    echo "🔧 Installing Brave browser"
-    if curl -fsS https://dl.brave.com/install.sh | sh; then
-        echo "✅ Brave browser installed successfully"
-    else
-        echo "❌ Brave browser failed to install"
-    fi
-fi
 
 # Set up SSH keys
 eval $(keychain --eval --agents ssh id_ed25519_personal id_ed25519_work)
