@@ -7,3 +7,6 @@ encrypt:
 decrypt:
 	@ansible-vault decrypt private_repos.sh
 	@chmod +x private_repos.sh
+
+deps-update:
+	@bash auto_deps_update.sh
