@@ -849,6 +849,102 @@
           "store_path": "/nix/store/0hmxk8gvmq5k8cixjap43sj633s6zlrq-protoc-gen-go-1.36.11"
         }
       }
+    },
+    "ssm-session-manager-plugin@1.2.779.0": {
+      "last_modified": "2026-02-23T15:40:43Z",
+      "resolved": "github:NixOS/nixpkgs/80d901ec0377e19ac3f7bb8c035201e2e098cc97#ssm-session-manager-plugin",
+      "source": "devbox-search",
+      "version": "1.2.779.0",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/fbymy199v1hpl0dbz36sx5igibg4q0q7-ssm-session-manager-plugin-1.2.779.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/fbymy199v1hpl0dbz36sx5igibg4q0q7-ssm-session-manager-plugin-1.2.779.0"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/b90ghq4f5l8xym461r1cr0y6ajn1fwvg-ssm-session-manager-plugin-1.2.779.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/b90ghq4f5l8xym461r1cr0y6ajn1fwvg-ssm-session-manager-plugin-1.2.779.0"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/l5lvh2x6vkh4axgg9qk7zqc69d7v2bxr-ssm-session-manager-plugin-1.2.779.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/l5lvh2x6vkh4axgg9qk7zqc69d7v2bxr-ssm-session-manager-plugin-1.2.779.0"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/08zvzpzxfv6alqs6iv4075hxvpjyfcxp-ssm-session-manager-plugin-1.2.779.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/08zvzpzxfv6alqs6iv4075hxvpjyfcxp-ssm-session-manager-plugin-1.2.779.0"
+        }
+      }
+    },
+    "terraform@1.14.5": {
+      "last_modified": "2026-02-23T15:40:43Z",
+      "resolved": "github:NixOS/nixpkgs/80d901ec0377e19ac3f7bb8c035201e2e098cc97#terraform",
+      "source": "devbox-search",
+      "version": "1.14.5",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/0ha9mpp5rjkx3nz8acmshprrf1aivxnm-terraform-1.14.5",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/0ha9mpp5rjkx3nz8acmshprrf1aivxnm-terraform-1.14.5"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/icp8hnz14lfnjm5065rrhsp3mn47645f-terraform-1.14.5",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/icp8hnz14lfnjm5065rrhsp3mn47645f-terraform-1.14.5"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/5kl61il281jx2zcfzys23m9yjkwjx2nv-terraform-1.14.5",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/5kl61il281jx2zcfzys23m9yjkwjx2nv-terraform-1.14.5"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/wvxpzvjpsq87bnjga22wv4w81x44a5d7-terraform-1.14.5",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/wvxpzvjpsq87bnjga22wv4w81x44a5d7-terraform-1.14.5"
+        }
+      }
     }
   }
 }
