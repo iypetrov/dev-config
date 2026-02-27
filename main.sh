@@ -176,7 +176,6 @@ fi
 
 # ip812 repos
 "${scripts_dir}"/clone-repo.sh git@github.com:ip812/infra.git ip812/infra
-"${scripts_dir}"/clone-repo.sh git@github.com:ip812/apps.git ip812/apps
 "${scripts_dir}"/clone-repo.sh git@github.com:ip812/blog.git ip812/blog
 
 # oss repos
