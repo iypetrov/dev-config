@@ -178,6 +178,10 @@ fi
 "${scripts_dir}"/clone-repo.sh git@github.com:ip812/infra.git ip812/infra
 "${scripts_dir}"/clone-repo.sh git@github.com:ip812/blog.git ip812/blog
 
+# zofiri
+"${scripts_dir}"/clone-repo.sh git@github.com:zofiri/zofiri.git zofiri/zofiri
+"${scripts_dir}"/clone-repo.sh git@github.com:zofiri/zofiri-operator.git zofiri/zofiri-operator
+
 # oss repos
 "${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/opentelemetry-operator.git git@github.com:open-telemetry/opentelemetry-operator.git oss/opentelemetry-operator
 "${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/opentelemetry-collector-contrib.git git@github.com:open-telemetry/opentelemetry-collector-contrib.git oss/opentelemetry-collector-contrib
