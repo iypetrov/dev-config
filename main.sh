@@ -160,7 +160,7 @@ if ! command -v devbox &>/dev/null; then
     curl -fsSL https://get.jetify.com/devbox | bash
 fi
 
-devbox install --config /projects/common/dev-config/devbox.json
+devbox install --config "${prj_dir}/common/dev-config/devbox.json"
 
 # Set up SSH keys
 eval $(keychain --eval --agents ssh id_ed25519_personal id_ed25519_work)
@@ -168,6 +168,10 @@ KEYCHAIN_ENV="/root/.keychain/$(hostname)-sh"
 if [[ -f "$KEYCHAIN_ENV" ]]; then
     source "$KEYCHAIN_ENV"
 fi
+
+# GitHub
+
+gh auth login --with-token < "${prj_dir}/common/vault/auth_codes/github.txt"
 
 # personal repos
 "${scripts_dir}"/clone-repo.sh git@github.com:iypetrov/go-playground.git personal/go-playground
