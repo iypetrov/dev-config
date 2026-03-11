@@ -193,6 +193,8 @@ gh auth login --with-token < "${prj_dir}/common/vault/auth_codes/github.txt"
 "${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/fluent-bit.git git@github.com:fluent/fluent-bit.git oss/fluent-bit
 "${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/fluent-operator.git git@github.com:fluent/fluent-operator.git oss/fluent-operator
 
+"${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/VictoriaLogs.git git@github.com:VictoriaMetrics/VictoriaLogs.git oss/VictoriaLogs master 
+
 "${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/enhancements.git git@github.com:gardener/enhancements.git oss/enhancements
 "${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/gardener.git git@github.com:gardener/gardener.git oss/gardener
 "${scripts_dir}"/clone-forked-repo.sh git@github.com:iypetrov/oidc-apps-controller.git git@github.com:gardener/oidc-apps-controller.git oss/oidc-apps-controller

@@ -23,7 +23,7 @@
     "kind@0.31.0",
     "fluxcd@2.7.5",
 
-    "terraform@1.14.5",
+    "terraform@1.14.6",
 
     "awscli2@2.33.2",
     "ssm-session-manager-plugin@1.2.779.0"
