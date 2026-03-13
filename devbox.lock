@@ -746,6 +746,55 @@
         }
       }
     },
+    "nodejs@25.8.0": {
+      "last_modified": "2026-03-04T00:49:39Z",
+      "plugin_version": "0.0.2",
+      "resolved": "github:NixOS/nixpkgs/0fd2db475afdde93c9e4b1625aafb8eb41b99807#nodejs_25",
+      "source": "devbox-search",
+      "version": "25.8.0",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/dx0ak4wpn91a5ps032xlgzjblz2arynh-nodejs-25.8.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/dx0ak4wpn91a5ps032xlgzjblz2arynh-nodejs-25.8.0"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/ab3p2f0hz6hn0ksrcg2sxd3hff9qba6q-nodejs-25.8.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/ab3p2f0hz6hn0ksrcg2sxd3hff9qba6q-nodejs-25.8.0"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/szjxi7dmi65hijd87kwcdgbjmvx6kki6-nodejs-25.8.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/szjxi7dmi65hijd87kwcdgbjmvx6kki6-nodejs-25.8.0"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/75b4bawmhdmr18w6fpvgcxzcp5vjgwkf-nodejs-25.8.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/75b4bawmhdmr18w6fpvgcxzcp5vjgwkf-nodejs-25.8.0"
+        }
+      }
+    },
     "opentelemetry-collector-builder@0.144.0": {
       "last_modified": "2026-01-30T02:32:49Z",
       "resolved": "github:NixOS/nixpkgs/6308c3b21396534d8aaeac46179c14c439a89b8a#opentelemetry-collector-builder",
@@ -994,51 +1043,99 @@
         }
       }
     },
-    "terraform@1.14.5": {
-      "last_modified": "2026-02-23T15:40:43Z",
-      "resolved": "github:NixOS/nixpkgs/80d901ec0377e19ac3f7bb8c035201e2e098cc97#terraform",
+    "terraform@1.14.6": {
+      "last_modified": "2026-02-26T05:06:13Z",
+      "resolved": "github:NixOS/nixpkgs/26eaeac4e409d7b5a6bf6f90a2a2dc223c78d915#terraform",
       "source": "devbox-search",
-      "version": "1.14.5",
+      "version": "1.14.6",
       "systems": {
         "aarch64-darwin": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/0ha9mpp5rjkx3nz8acmshprrf1aivxnm-terraform-1.14.5",
+              "path": "/nix/store/iymy7ngy389m4zyvbsyij1d4g3k482v5-terraform-1.14.6",
               "default": true
             }
           ],
-          "store_path": "/nix/store/0ha9mpp5rjkx3nz8acmshprrf1aivxnm-terraform-1.14.5"
+          "store_path": "/nix/store/iymy7ngy389m4zyvbsyij1d4g3k482v5-terraform-1.14.6"
         },
         "aarch64-linux": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/icp8hnz14lfnjm5065rrhsp3mn47645f-terraform-1.14.5",
+              "path": "/nix/store/hqkcfmdw0vwrnh7isr2czx98kqkl45w5-terraform-1.14.6",
               "default": true
             }
           ],
-          "store_path": "/nix/store/icp8hnz14lfnjm5065rrhsp3mn47645f-terraform-1.14.5"
+          "store_path": "/nix/store/hqkcfmdw0vwrnh7isr2czx98kqkl45w5-terraform-1.14.6"
         },
         "x86_64-darwin": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/5kl61il281jx2zcfzys23m9yjkwjx2nv-terraform-1.14.5",
+              "path": "/nix/store/xvihg1chb9qzxa7kzvgslapc2p5q6gd7-terraform-1.14.6",
               "default": true
             }
           ],
-          "store_path": "/nix/store/5kl61il281jx2zcfzys23m9yjkwjx2nv-terraform-1.14.5"
+          "store_path": "/nix/store/xvihg1chb9qzxa7kzvgslapc2p5q6gd7-terraform-1.14.6"
         },
         "x86_64-linux": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/wvxpzvjpsq87bnjga22wv4w81x44a5d7-terraform-1.14.5",
+              "path": "/nix/store/hdfbrhnggd1f7m68j7nh1bsici4irl9n-terraform-1.14.6",
               "default": true
             }
           ],
-          "store_path": "/nix/store/wvxpzvjpsq87bnjga22wv4w81x44a5d7-terraform-1.14.5"
+          "store_path": "/nix/store/hdfbrhnggd1f7m68j7nh1bsici4irl9n-terraform-1.14.6"
+        }
+      }
+    },
+    "typescript-language-server@5.1.3": {
+      "last_modified": "2026-02-23T15:40:43Z",
+      "resolved": "github:NixOS/nixpkgs/80d901ec0377e19ac3f7bb8c035201e2e098cc97#typescript-language-server",
+      "source": "devbox-search",
+      "version": "5.1.3",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/a3hs018i90hb0w5yxypgwyl308kwgdf2-typescript-language-server-5.1.3",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/a3hs018i90hb0w5yxypgwyl308kwgdf2-typescript-language-server-5.1.3"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/j07abdh7n7rw940lsgvc6i6f3vz0q20s-typescript-language-server-5.1.3",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/j07abdh7n7rw940lsgvc6i6f3vz0q20s-typescript-language-server-5.1.3"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/x5q52pppj1bx8b4jk025bh72ylmyrq1a-typescript-language-server-5.1.3",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/x5q52pppj1bx8b4jk025bh72ylmyrq1a-typescript-language-server-5.1.3"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/hb28nfxmlsdvbf82d5lcsb442nzbkb3l-typescript-language-server-5.1.3",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/hb28nfxmlsdvbf82d5lcsb442nzbkb3l-typescript-language-server-5.1.3"
         }
       }
     }
